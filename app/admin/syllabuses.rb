@@ -22,7 +22,7 @@ ActiveAdmin.register Syllabus do
     end
     column :database  
     # column :title
-    column :titile, as: :select
+    # column :titile, as: :select
     column :title do |syllabus|
       link_to syllabus.title, admin_syllabus_path(syllabus)
     end
