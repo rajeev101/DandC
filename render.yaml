@@ -1,0 +1,18 @@
+databases:
+  - name: repo
+    databaseName: repo_kr7w
+    user: repo_kr7w_user
+
+services:
+  - type: web
+    name: repo
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: repo_kr7w
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

@@ -1,0 +1,76 @@
+<%= render "header" %>
+<style type="text/css">
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #80808017;
+    }
+    .text-center{
+        font-style: initial;
+    }
+    img{
+        background-image: grey;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        padding-right: 0.5rem;
+        padding-left: 3.5rem;
+        font-weight: bold;
+    }
+    button {
+        background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        border: none;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    h1{
+    	text-transform: capitalize;
+    	margin-left: 78px;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-#80808017">
+    <img src="https://i.postimg.cc/8PytfQ5h/new.png" alt="" class="img-fluid" width="70px">
+    <div class="container" >
+        <ul class="navbar-nav">
+            <li class="nav-item active" style="color: black;">
+                <a class="nav-link" href="/learnings">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/procast">Podcast</a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+            <button class="button" style="background-color: blue; color: white; padding: 6px 20px; border: none;cursor: pointer;">LOGIN | SIGNUP</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+<h1>Privacy Policy</h1>
+<div class="container" style="display: flex; flex-direction: column;">
+
+   <br>Get SDE Ready ("we", "us", "our", "Get SDE Ready") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.<br><br>
+   <p><strong>1. Collection of Personal Information: </strong>We collect personal information that you voluntarily provide to us when you register on our website, express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise contact us. The personal information that we collect depends on the context of your interactions with us and the website, the choices you make and the products and features you use.</p><br>
+   <p><strong>2. Use of Your Information: </strong>We use the information we collect or receive:</p>
+   <ul style="list-style-type: inherit;"><br>
+    <li>To facilitate account creation and logon process.</li>
+    <li>To send you marketing and promotional communications.</li>
+    <li>To enable user-to-user communications.</li>
+    <li>To manage user accounts.</li>
+    <li>To deliver and facilitate delivery of services to the user.</li>
+</ul><br>
+<p><strong>3. Sharing Your Personal Information: </strong>We only share information with your consent, to comply with laws, to protect your rights, or to fulfill business obligations.</p><br>
+<p><strong>4. Security of Your Information: </strong>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process.</p><br>
+<p><strong>5. Rights Regarding Your Personal Information: </strong>Depending on the jurisdiction, you may have certain rights with respect to your personal information, such as rights of access, to receive a copy of your data, or to delete your data or restrict or object to our processing of your data.</p><br>
+<p><strong>6. Policy for Children: </strong>We do not knowingly solicit information from or market to children under the age of 13.</p><br>
+</div>
+<%= render "footer" %>

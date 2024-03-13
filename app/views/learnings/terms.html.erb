@@ -1,0 +1,76 @@
+<%= render "header" %>
+<style type="text/css">
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #80808017;
+    }
+    .text-center{
+        font-style: initial;
+    }
+    img{
+        background-image: grey;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        padding-right: 0.5rem;
+        padding-left: 3.5rem;
+        font-weight: bold;
+    }
+    button {
+        background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        border: none;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    h1{
+    	text-transform: capitalize;
+    	margin-left: 78px;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-#80808017">
+    <img src="https://i.postimg.cc/8PytfQ5h/new.png" alt="" class="img-fluid" width="70px">
+    <div class="container" >
+        <ul class="navbar-nav">
+            <li class="nav-item active" style="color: black;">
+                <a class="nav-link" href="/learnings">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/procast">Podcast</a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+            <button class="button" style="background-color: blue; color: white; padding: 6px 20px; border: none;cursor: pointer;">LOGIN | SIGNUP</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+<h1>Terms and Conditions</h1>
+<div class="container" style="display: flex; flex-direction: column;">
+
+    <br>
+    Welcome to Get SDE Ready ("we", "us", "our", "Get SDE Ready"). Please read these Terms and Conditions carefully before purchasing any courses from us. By purchasing courses from us, you agree to these Terms and Conditions.<br><br>
+    <p><strong>1. Courses: </strong>We provide a range of courses designed to prepare students for software development engineer roles. Course details, including but not limited to content, duration, price, and instructor details, are available on our website.</p><br>
+    <p><strong>2. Purchases: </strong>When you purchase a course from us, you agree to provide current, complete, and accurate purchase information. We reserve the right to refuse or cancel orders if fraudulent activity is suspected.</p><br>
+    <p><strong>3. Refund Policy: </strong>All your purchases can be refunded within 7 days of registration.</p><br>
+    <p><strong>4. Course Access: </strong>Upon successful purchase of a course, you will be granted access to course materials and live sessions. You agree to respect the intellectual property rights of the content provided and not to share access or content with any third parties.</p><br>
+    <p><strong>5. Behavior and Conduct: </strong>We reserve the right to refuse service or access to the courses for any user who does not comply with the terms set out here, or who interferes with the ability of instructors to deliver courses or other students' ability to learn.</p><br>
+    <p><strong>6. Changes to the Terms: </strong>We reserve the right, at our sole discretion, to modify or replace these Terms and Conditions at any time. It is your responsibility to periodically review these Terms and Conditions for updates.</p><br>
+    <p><strong>7. Contact Us: </strong>If you have any questions about these Terms and Conditions, please contact us. Email id: arun@getsdeready.com Phone num: 9773728034</p><br>
+</div>
+<%= render "footer" %>
+
+
+
+
+

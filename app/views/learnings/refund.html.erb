@@ -1,0 +1,67 @@
+<%= render "header" %>
+<style type="text/css">
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #80808017;
+    }
+    .text-center{
+        font-style: initial;
+    }
+    img{
+        background-image: grey;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        padding-right: 0.5rem;
+        padding-left: 3.5rem;
+        font-weight: bold;
+    }
+    button {
+        background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        border: none;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    h1{
+    	text-transform: capitalize;
+    	margin-left: 78px;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-#80808017">
+    <img src="https://i.postimg.cc/8PytfQ5h/new.png" alt="" class="img-fluid" width="70px">
+    <div class="container" >
+        <ul class="navbar-nav">
+            <li class="nav-item active" style="color: black;">
+                <a class="nav-link" href="/learnings">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/jobs">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/procast">Podcast</a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+            <button class="button" style="background-color: blue; color: white; padding: 6px 20px; border: none;cursor: pointer;">LOGIN | SIGNUP</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+<h1>Refund &amp; Cancellation Policy</h1>
+<div class="container" style="display: flex; flex-direction: column;">
+<br>At Get SDE Ready ("we", "us", "our", "Get SDE Ready"), we value our customers and understand that sometimes students may change their mind or find that a course isn't the right fit for them. Our refund and cancellation policy is outlined below.<br><br>
+<p><strong>1. Cancellation: </strong>You have the right to cancel your course purchase within 7 days from the commencement of the course. If you wish to cancel, please contact us as soon as possible. Any delay in communication beyond this 7-day period may affect your eligibility for a refund.</p><br>
+<p><strong>2. Refunds: </strong>If you cancel your purchase within 7 days from the commencement of the course, you will receive a full refund, minus any fees or costs incurred by us in the provision of the course up until the time of cancellation. Refunds will be processed within 15 business days and will be returned to the original payment method.</p><br>
+<p><strong>3. Exceptions: </strong>In certain situations where the course content was made available and consumed extensively or if the course was completed before the cancellation was requested, we may deny the refund request.</p><br>
+<p><strong>4. Late or Missing Refunds: </strong>If you haven't received a refund yet, first check your bank account again. Then contact your credit card company or payment provider, as it may take some time before your refund is officially posted. If you’ve done all of this and you still have not received your refund yet, please contact us.</p><br>
+<p><strong>5. Changes to our Refund &amp; Cancellation Policy: </strong>We reserve the right to change our Refund &amp; Cancellation Policy at any time. Changes and clarifications will take effect immediately upon their posting on the website.</p>
+</div>
+<%= render "footer" %>

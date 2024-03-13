@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_name: MyString
+  description: MyText
+  price: MyString
+  discounted_price: MyString
+  live_classes: 1
+  quizzes: 1
+  projects: 1
+  doubt_support: 1
+  interview_questions_covered: 1
+  lifetime_access: false
+  image_url: MyString
+
+two:
+  course_name: MyString
+  description: MyText
+  price: MyString
+  discounted_price: MyString
+  live_classes: 1
+  quizzes: 1
+  projects: 1
+  doubt_support: 1
+  interview_questions_covered: 1
+  lifetime_access: false
+  image_url: MyString

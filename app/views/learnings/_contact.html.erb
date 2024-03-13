@@ -1,0 +1,94 @@
+<style type="text/css">
+	h4 {
+		display: flex;
+		justify-content: space-between;
+	}
+	p {
+		font-size: 10px;
+	}
+	.contact .email-form {
+		width: 100%;
+    }
+    .info i{
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #e3e3e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-left: 35px;
+    }
+    i {
+    	margin-right: 37px;
+    }
+</style>
+<body>
+<% @contacts.each do |contact| %>
+<div class="container">
+	<div class="row1" style="display: -ms-flexbox; display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;margin-left: -16px; width: 100%;">
+		<div class="col-lg-4">
+			<div class="info">
+				<div class="address">
+					<i><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+						<path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+						<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+					</svg></i>
+					<h4 style="color: black;">Location:</h4>
+				    <p style="color: black;"><%= contact.address %></p>
+				</div>
+				<div class="open-hours">
+					<i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-alarm" viewBox="0 0 16 16">
+					  <path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>
+					  <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>
+					</svg></i>
+					<h4 style="color: black;">Open Hours:</h4>
+					<p style="color: black;">Every day:<br><%= contact.open_time %></p>
+				</div>
+				<div class="email">
+					<i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+					  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+					</svg></i>
+					<h4 style="color: black;">Email:</h4>
+					<p style="color: black;"><%= contact.email %></p>
+				</div>
+				<div class="phone">
+					<i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+					  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+					  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+					</svg></i>
+					<h4 style="color: black;">Call:</h4>
+					<p style="color: black;"><%= contact.phone_number %></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-8 mt-5 mt-lg-0">
+			<form action="https://formspree.io/f/xwkdearj" method="post" class="email-form" id="my-form">
+				<div class="row1"style="display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: -16px;width: 100%;">
+					<div class="col-md-6 form-group">
+						<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="" style="color: black;">
+					</div>
+					<div class="col-md-6 form-group mt-3 mt-md-0">
+						<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="" style="color: black;">
+					</div>
+			    </div>
+				<div class="form-group mt-3">
+					<input type="text" class="form-control" name="subject" id="subject" placeholder="Your Phone No." required="" style="color: black;">
+				</div>
+				<div class="form-group mt-3">
+					<textarea class="form-control" name="message" rows="8" placeholder="Type your message here, we generally reply within 10 minutes" required="" style="color: black; height: 200px;">
+					</textarea>
+				</div>
+				<div class="text-center">
+					<button type="submit">Send Message</button>
+				</div>
+				<p id="my-form-status"></p>
+		    </form>
+	    </div>
+    </div>
+</div>
+<% end %>
+</body>
