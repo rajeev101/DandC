@@ -365,6 +365,7 @@ textarea#registration_message {
   .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: white;
 }
+
 h3.faq-title {
     font-size: 17px;
 /*    font-weight: revert;*/
@@ -407,16 +408,26 @@ h3.faq-title {
 h2 {
     font-size: 42px;
     font-weight: bold;
-        color: #FFFFFF;
+    color: #FFFFFF;
     font-size: 58px;
     line-height: 68px;
     letter-spacing: 0.5px;
     word-spacing: 6px;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
 </style>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+    <nav class="navbar navbar-expand-lg navbar-light bg-black" id="myHeader">
         <a href="/learnings">
             <svg width="50" height="50" viewBox="0 0 183 167" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M99.4946 0H27.4946H7.49463V20V53.2541C11.6309 44.3145 18.7127 37.0164 27.4946 32.6049V20H99.4946V20.0019C134.335 20.2706 162.495 48.5967 162.495 83.5C162.495 111.767 144.025 135.721 118.495 143.95V164.711C155.205 155.928 182.495 122.901 182.495 83.5C182.495 37.551 145.381 0.27047 99.4946 0.00146484V0ZM24.5585 138.362C17.6575 129.535 18.7509 117.002 26.771 109.485L14.4264 93.6955C-2.28188 108.047 -4.90408 133.149 8.80262 150.68C22.5093 168.212 47.5022 171.722 65.4615 158.97L53.1164 143.181C43.8862 149.151 31.4596 147.188 24.5585 138.362ZM69.4366 153.948L20.9536 91.9376L36.7081 79.6199L66.4456 117.655C68.5469 113.8 71.4535 110.301 75.1327 107.425C82.2837 101.834 91.0107 99.6424 99.3667 100.613L96.9367 120.465C93.6607 120.117 90.2517 120.991 87.4517 123.181C81.7327 127.651 80.7217 135.911 85.1927 141.63C88.2177 145.499 92.9787 147.213 97.5127 146.532L97.4997 166.623C87.0077 167.233 76.3997 162.854 69.4366 153.948ZM73.1725 51.1098C84.4465 65.5298 81.8965 86.3591 67.4765 97.6334L55.1578 81.8775C60.8761 77.4066 61.8874 69.1468 57.4166 63.4285C52.9457 57.7102 44.6859 56.699 38.9676 61.1698C33.2493 65.6406 32.238 73.9005 36.7089 79.6188L20.953 91.9375C9.67871 77.5175 12.2288 56.6881 26.6488 45.4139C41.0689 34.1396 61.8982 36.6897 73.1725 51.1098Z" fill="white"/>
@@ -455,24 +466,36 @@ h2 {
             </ul>
         </div>
     </nav>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
 
 
 
-<div class="background-container">
-<div class="carousel-caption" style="text-align: left;">
-    <div class="elementor-heading-title elementor-size-default" style="margin-bottom: 150px;">
-        <h2>Programming <br> Excellence Begins</h2>
-       
-        <p class="size" style="font-size: 20px; color: white;">
-            <strong>InstaDot Analytics is a leading training and placement company</strong><br>
-            <strong>that provides a wide range of services for students, professionals,</strong><br>
-            <strong>institutes, and companies in the field of IT and Data Science.</strong>
-        </p>
+    <div class="background-container">
+        <div class="carousel-caption" style="text-align: left;">
+            <div class="elementor-heading-title elementor-size-default" style="margin-bottom: 150px;">
+                <h2>Programming <br> Excellence Begins</h2>
+                <p class="size" style="font-size: 20px; color: white;">
+                    <strong>InstaDot Analytics is a leading training and placement company</strong><br>
+                    <strong>that provides a wide range of services for students, professionals,</strong><br>
+                    <strong>institutes, and companies in the field of IT and Data Science.</strong>
+                </p>
+            </div>
+        </div>
     </div>
-</div>
 
-    </div>
-</div>
 
 
 
