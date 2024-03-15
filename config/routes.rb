@@ -38,4 +38,10 @@ Rails.application.routes.draw do
   get 'signup', to: 'learnings#signup', as: 'signup'
   get 'more', to: 'learnings#more', as: 'more' 
 
+
+
+  # post '/users/login', to: 'users#login'
+  # post '/users/signup', to: 'users#signup'
+  # post '/users/forgot_password', to: 'users#forgot_password'
+
 end
