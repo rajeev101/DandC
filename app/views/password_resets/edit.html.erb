@@ -1,0 +1,13 @@
+<h1>Reset Password</h1>
+
+<%= form_for @account, url: password_reset_path(token: params[:token]), method: :patch do |f| %>
+  <%= f.label :password, "New Password" %>
+  <%= f.password_field :password, class: "form-control", required: true %>
+
+  <%= f.label :password_confirmation, "Confirm Password" %>
+  <%= f.password_field :password_confirmation, class: "form-control", required: true %>
+
+  <div class="field btn">
+    <%= f.submit "Reset Password", class: "btn-submit" %>
+  </div>
+<% end %>
