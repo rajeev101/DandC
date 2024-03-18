@@ -1,5 +1,5 @@
 class LearningsController < ApplicationController
-   before_action :set_user, only:[:show,:edit,:update,:destroy ]
+   before_action :set_user, only:[:show]
   def index
     @courses = Course.all
     @faqs = Faq.all
@@ -8,7 +8,17 @@ class LearningsController < ApplicationController
     @contacts = Contact.all
     @registrations = Registration.all
     @registration = Registration.new 
+
   end
+
+  def more
+    @categories = Category.all
+    @subcategories = Subcategory.all
+    @registrations = Registration.all
+    @registration = Registration.new 
+  end  
+
+
 
   def create
     registration = Registration.new(registration_params)

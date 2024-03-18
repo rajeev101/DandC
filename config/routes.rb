@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :syllabus
   end
+  resources :learnings do
+    get 'more/:category_id', to: 'learnings#more', as: 'more'
+  end
   root 'learnings#index'
-
+  resources :categories
+  resources :subcategories
   resources :syllabus
   resources :registration, only: [:new, :create, :index]
   resources :contacts
@@ -23,6 +27,7 @@ Rails.application.routes.draw do
   get 'procast', to: 'learnings#procast', as: 'procast'
   get 'login', to: 'learnings#login', as: 'login'
   get 'more', to: 'learnings#more', as: 'more'
+  get 'pdf', to: 'learnings#pdf', as: 'pdf'
 
   resources :accounts, only: [:new, :create]
 
