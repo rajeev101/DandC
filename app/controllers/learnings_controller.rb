@@ -7,16 +7,17 @@ class LearningsController < ApplicationController
     @recommendations = Recommendation.all
     @contacts = Contact.all
     @registrations = Registration.all
-    @registration = Registration.new 
+    @registration = Registration.new
 
   end
 
   def more
     @categories = Category.all
     @subcategories = Subcategory.all
+    @super_sub_categories = SuperSubCategory.all
     @registrations = Registration.all
-    @registration = Registration.new 
-  end  
+    @registration = Registration.new
+  end
 
 
 
@@ -35,7 +36,7 @@ class LearningsController < ApplicationController
     end
   end
   def show
-   
+
   end
 
   private

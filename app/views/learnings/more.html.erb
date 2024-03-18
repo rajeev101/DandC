@@ -15,8 +15,8 @@
 }
     button {
         background-color: blue;
-        color: white; 
-        padding: 10px 20px; 
+        color: white;
+        padding: 10px 20px;
         border: none;
         cursor: pointer;
         border: 2px solid white;
@@ -31,7 +31,7 @@
         border: none;
         cursor: pointer;
         border: 0px solid white;
-    } 
+    }
     .centered {
         position: absolute;
         top: 50%;
@@ -118,17 +118,17 @@
 .html-icon{
 	width: 41px;
     height: 28px;
-        margin-top: 10px;	
+        margin-top: 10px;
 }
 .node-js-icon{
 	width: 41px;
     height: 28px;
-        margin-top: 10px;	
+        margin-top: 10px;
 }
 .node-js-icon{
 	width: 41px;
     height: 28px;
-        margin-top: 10px;	
+        margin-top: 10px;
 }
 
 .content {
@@ -205,7 +205,7 @@
 
 
 
- 
+
 
 
 
@@ -271,24 +271,28 @@
       <%= category.title %>
     </h6>
     <br>
-    <!-- Additional content here if needed -->
   </div>
 <% end %>
 <div class="container">
 	<div class="viewBox">
-        <% @subcategories.each do |subcategory| %>
-		<div class="icon-box">
-            <div class="icon" style="width: 50px; height: 50px;">
-              <%= image_tag subcategory.image, style: "max-width: 100%; max-height: 100%; border-radius: 50%;" if subcategory.image.attached? %>
-            </div>
+    <% @subcategories.each do |subcategory| %>
+			<div class="icon-box">
+				<div class="icon" style="width: 50px; height: 50px;">
+					<%= image_tag subcategory.image, style: "max-width: 100%; max-height: 100%; border-radius: 50%;" if subcategory.image.attached? %>
+				</div>
+
+				<div class="content">
+					<h6 class="title"><%= subcategory.title %></h6>
+					<p class="description">
+						<% subcategory.super_sub_categories.pluck(:name).each do |super_subcategory_name| %>
+							<%= super_subcategory_name %><br>
+						<% end %>
+					</p>
+				</div>
+			</div>
+		<% end %>
 
 
-		    <div class="content">
-		        <h6 class="title"><%= subcategory.title %></h6>
-		        <p class="description">INTRODUCTION<br>INSTALLING DEPENDENCIES</p>
-		    </div>
-		</div>
-        <% end %>
 
 		<h3 class="heading" style="font-weight: bold;">For more Info !</h3>
 		<button type="submit" class="btn btn-primary">Click here FOr Download Mern pdf</button>
@@ -326,13 +330,3 @@
 
 <br>
 <%= render "footer" %>
-
-
-
-
-
-
-
-
-
-

@@ -7,7 +7,7 @@
 
         <div class="container">
           <ul class="navbar-nav">
-            <% if current_user %>
+            <%# if current_user %>
               <li class="nav-item active" style="color: blcak;">
                   <a class="nav-link" href="/learnings" style="color: #ffffff;">Home</a>
               </li>
@@ -26,14 +26,14 @@
               <li class="nav-item">
                 <a class="nav-link" href="/procast" style="color: #ffffff;">Blogs</a>
               </li>&nbsp;&nbsp;&nbsp;&nbsp;
-              <li class="nav-item">
-                  <%= link_to 'Logout', logout_path, method: :delete, class: "nav-link", style: "color: #ffffff;" %>
-              </li>
-            <% else %>
+              <%# <li class="nav-item"> %>
+                  <%#= link_to 'Logout', logout_path, method: :delete, class: "nav-link", style: "color: #ffffff;" %>
+              <%# </li> %>
+            <%# else %>
               <li class="nav-item">
                 <%= link_to 'Login | Signup', login_path, class: "nav-link", style: "color: #ffffff;" %>
               </li>
-            <% end %>
+            <%# end %>
           </ul>
         </div>
     </nav>
