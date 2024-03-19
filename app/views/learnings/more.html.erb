@@ -153,62 +153,51 @@
     margin-left: 46px;
     margin-top: 29px;
 }
+.card {
+    width: 484px; 
+    margin: 0 auto;
+    padding: 30px; 
+    background-color: #fff;
+    border-radius: 12px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
 
+.card h6 {
+    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
 
+.form-group {
+    margin-bottom: 20px;
+}
 
-        .card {
-            width: 484px; /* Increased max-width */
-            margin: 0 auto;
-            padding: 30px; /* Increased padding */
-            background-color: #fff;
-            border-radius: 12px; /* Increased border radius */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
-            font-size: 16px; /* Increased font size */
-        }
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
-        .card h6 {
-            margin-top: 0;
-            font-size: 25px;
-            font-weight: bold;
-        }
+.btn-primary {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 26px;
+    cursor: pointer;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.btn-primary:hover {
+    background-color: #ff9900;
+}
 
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .btn-primary {
-            background-color: orange;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 26px;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background-color: #ff9900;
-        }
-
-                .container {
-            display: flex; /* Use flexbox */
-            justify-content: space-between; /* Space the items evenly */
-        }
-
-
-
-
-
-
-
-
+        .container {
+    display: flex;
+    justify-content: space-between; 
+}
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-black" id="myHeader">
         <a href="/learnings">
@@ -271,27 +260,32 @@
 <% end %>
 <div class="container">
 	<div class="viewBox">
+    <% count = 0 %>
     <% @subcategories.each do |subcategory| %>
-			<div class="icon-box">
-				<div class="icon" style="width: 50px; height: 50px;">
-					<%= image_tag subcategory.image, style: "max-width: 100%; max-height: 100%; border-radius: 50%;" if subcategory.image.attached? %>
-				</div>
+      <% if count < 4 %>
+  			<div class="icon-box">
+  				<div class="icon" style="width: 50px; height: 50px;">
+  					<%= image_tag subcategory.image, style: "max-width: 100%; max-height: 100%; border-radius: 50%;" if subcategory.image.attached? %>
+  				</div>
 
-				<div class="content">
-					<h6 class="title"><%= subcategory.title %></h6>
-					<p class="description">
-						<% subcategory.super_sub_categories.pluck(:name).each do |super_subcategory_name| %>
-							<%= super_subcategory_name %><br>
-						<% end %>
-					</p>
-				</div>
-			</div>
+  				<div class="content">
+  					<h6 class="title"><%= subcategory.title %></h6>
+
+
+  					<p class="description">
+  						<% subcategory.super_sub_categories.pluck(:name).each do |super_subcategory_name| %>
+  							<%= super_subcategory_name %><br>
+  						<% end %>
+  					</p>
+  				</div>
+  			</div>
+      <% count += 1 %>
+      <% end %>
 		<% end %>
 
-
-
 		<h3 class="heading" style="font-weight: bold;">For more Info !</h3>
-<a href="/pdf" onclick="downloadPDF()" class="btn btn-primary">Click here to Download Mern PDF</a>
+    <a href="https://instadotanalytics.com/wp-content/uploads/2024/03/MERN-Curriculum-1.pdf" onclick="downloadPDF()" class="btn btn-primary">Click here to Download Mern PDF</a>
+
 
 	</div>
 
@@ -327,23 +321,3 @@
 
 <br>
 <%= render "footer" %>
-<script>
-    function downloadPDF() {
-        // Create a new jsPDF instance
-        var doc = new jsPDF();
-
-        // Add content to the PDF (optional)
-        doc.text("This is your PDF content.", 10, 10);
-
-        // Save the PDF with name "document.pdf"
-        doc.save("document.pdf");
-    }
-</script>
-
-<!-- Add an id attribute to the button -->
-
-
-<!-- Attach the downloadPDF function to the button's click event -->
-<script>
-    document.getElementById("downloadButton").addEventListener("click", downloadPDF);
-</script>
