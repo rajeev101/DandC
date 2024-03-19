@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>View and Download PDF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
 </head>
 <body>
-  <h1>Sample Content</h1>
-  <p>This is some sample content that users can view.</p>
-  <%= link_to "Download PDF", generate_pdf_learnings_path(format: :pdf), class: "btn btn-primary" %>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" action="#" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <button type="button" onclick="downloadPDF()">Download PDF</button>
+    </form>
+    <p id="message"></p>
+</div>
+
+<script>
+function downloadPDF() {
+    var registrationForm = document.getElementById('registrationForm');
+    var messageElement = document.getElementById('message');
+
+    // Check if browser supports PDF creation
+    if (typeof window.navigator.msSaveBlob !== 'undefined') {
+        // For IE and Edge browsers
+        window.navigator.msSaveBlob(new Blob([registrationForm.outerHTML], { type: 'application/pdf' }), 'registration_form.pdf');
+        messageElement.innerHTML = "PDF downloaded successfully!";
+    } else {
+        // For other browsers
+        html2pdf()
+            .from(registrationForm)
+            .save()
+            .then(function() {
+                messageElement.innerHTML = "PDF downloaded successfully!";
+            })
+            .catch(function(error) {
+                messageElement.innerHTML = "PDF download failed. " + error;
+            });
+    }
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
 </body>
 </html>
-

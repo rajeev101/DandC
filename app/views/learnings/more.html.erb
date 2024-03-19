@@ -241,10 +241,6 @@
                 <a href="/login">
                   <button class="button" style="background-color: white; color: black; padding: 6px 20px; border: none; cursor: pointer;">LOGIN | SIGNUP</button>
                 </a>
-   <!--         <div class="container" style="margin-top: 0px;">
-                    <a href="/signup" class="button" style="color: black;">SIGNUP</a>
-                    ss<a href="/login" class="button" style="color: black;">LOGIN</a>
-                </div> -->
                 </li>
             </ul>
         </div>
@@ -295,7 +291,8 @@
 
 
 		<h3 class="heading" style="font-weight: bold;">For more Info !</h3>
-		<button type="submit" class="btn btn-primary">Click here FOr Download Mern pdf</button>
+<a href="/pdf" onclick="downloadPDF()" class="btn btn-primary">Click here to Download Mern PDF</a>
+
 	</div>
 
     <%= form_for @registration, url: registration_index_url(@registration) do |f| %>
@@ -330,3 +327,23 @@
 
 <br>
 <%= render "footer" %>
+<script>
+    function downloadPDF() {
+        // Create a new jsPDF instance
+        var doc = new jsPDF();
+
+        // Add content to the PDF (optional)
+        doc.text("This is your PDF content.", 10, 10);
+
+        // Save the PDF with name "document.pdf"
+        doc.save("document.pdf");
+    }
+</script>
+
+<!-- Add an id attribute to the button -->
+
+
+<!-- Attach the downloadPDF function to the button's click event -->
+<script>
+    document.getElementById("downloadButton").addEventListener("click", downloadPDF);
+</script>
