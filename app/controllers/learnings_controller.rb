@@ -19,7 +19,7 @@ class LearningsController < ApplicationController
   end
 
   def procast
-    @blogs = Blog.all  # Assuming you want to fetch all blogs
+    @blogs = Blog.all
   end
 
 
