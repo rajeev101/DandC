@@ -70,15 +70,16 @@ body {
     </div>
 </nav>
 <% @blogs.each do |blog| %>
-<div class="background-container">
-    <div class="text-center" style="color: white; font-weight: bold; font-size: 25px; margin-
-    top: 12px; margin-top: 82px;"><%= blog.name %></div>
-    <div class="text-center" style="color: white; font-size: 10px;">
-        <p class="Blogs-size" style="font-size: 15px;">Make learning and teaching more effective with active<br>participation and student collaboration</p>
+  <div class="background-container">
+    <div class="text-center" style="color: white; font-weight: bold; font-size: 25px; margin-top: 12px; margin-top: 82px;">
+      <%= blog.name %>
     </div>
-</div>
+    <div class="text-center" style="color: white; font-size: 15px;">
+      <%= raw blog.description %>
+    </div>
+  </div>
 <% end %>
-<br><br>
+
 
 <br>
 <div class="container" style="display: flex; flex-direction: column;">
