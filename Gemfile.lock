@@ -48,6 +48,8 @@ GEM
       kaminari (~> 1.0, >= 1.2.1)
       railties (>= 6.1, < 7.1)
       ransack (>= 2.1.1, < 4)
+    activeadmin_quill_editor (1.1.0)
+      activeadmin (>= 2.0, < 4)
     activejob (6.1.7.7)
       activesupport (= 6.1.7.7)
       globalid (>= 0.3.6)
@@ -293,6 +295,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  activeadmin_quill_editor
+  activestorage
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   byebug
@@ -307,6 +311,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.6)
   sass-rails (>= 6)
+  sassc
   selenium-webdriver (>= 4.0.0.rc1)
   spring
   turbolinks (~> 5)

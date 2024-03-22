@@ -14,14 +14,15 @@ ActiveAdmin.register Blog do
     actions
   end
 
-  form do |f|
-    f.inputs 'Blogs Details' do
-      f.input :name
-      f.input :description
-      f.input :image, as: :file
-    end
-    f.actions
+ form do |f|
+  f.inputs 'Blog Details' do
+    f.input :name
+    f.input :description, as: :quill_editor
+    f.input :image, as: :file
   end
+  f.actions
+end
+
 
   show do
     attributes_table do
