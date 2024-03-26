@@ -23,6 +23,9 @@ gem 'jwt'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'activeadmin'
+gem 'activeadmin_quill_editor'
+gem 'sassc'
+gem 'activestorage'
 gem 'devise'
 
 # Use Active Storage variant

@@ -1,0 +1,7 @@
+/tmp
+/.env
+/config/database.yml
+/.bundle
+db/schema.rb
+/.byebug_history
+node_modules/

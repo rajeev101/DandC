@@ -8,7 +8,6 @@ class LearningsController < ApplicationController
     @contacts = Contact.all
     @registrations = Registration.all
     @registration = Registration.new
-
   end
 
   def more
@@ -17,7 +16,10 @@ class LearningsController < ApplicationController
     @super_sub_categories = SuperSubCategory.all
     @registrations = Registration.all
     @registration = Registration.new
+  end
 
+  def procast
+    @blogs = Blog.all
   end
 
 
