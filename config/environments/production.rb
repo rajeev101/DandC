@@ -32,7 +32,7 @@ Rails.application.configure do
   config.assets.enabled = true
 
   # Assumes that assets have been precompiled to the public/assets directory.
-  config.assets.compile = false
+  config.assets.compile = true
   
   # Fingerprinting enables the use of CDN and browser caching for assets.
   config.assets.digest = true
