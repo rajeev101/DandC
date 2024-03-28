@@ -29,7 +29,13 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.assets.enabled = true
+
+  # Assumes that assets have been precompiled to the public/assets directory.
   config.assets.compile = false
+  
+  # Fingerprinting enables the use of CDN and browser caching for assets.
+  config.assets.digest = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = 'http://assets.example.com'
