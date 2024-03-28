@@ -440,16 +440,13 @@ h2 {
             </div>
         </div>
     </div>
-
-
-
-
-
-    <div class="container" style="background-color: rgb(238, 245, 255);"><br>
-        <div class="test" style="font-weight: bold; font-size: 33px;">
-            <br>
-            <div class="join" id="Courses">Courses</div>
-            <br>
+    <div class="course" id="Courses"><br><br>
+        <div class="container" style="background-color: rgb(238, 245, 255);"><br>
+            <div class="test" style="font-weight: bold; font-size: 33px;">
+                <br>
+                <div class="join">Courses</div>
+                <br>
+            </div>
         </div>
     </div>
     <br>
@@ -622,14 +619,16 @@ h2 {
 
  
 
-
+   <div class="instructor" id="Instructors"><br><br>
    <%= render "instructors" %>
+   </div>
 
    <%= render "recommendation" %>
 
-    
-    <h1 id="Request Callback">Submit the form for Inquiry</h1><br>
+    <div class="Inquiry" id="Request Callback"><br><br>
+    <h1>Submit the form for Inquiry</h1><br>
     <%= render "contact" %>
+    </div>
 
     <%= render "footer" %>
 </div>
