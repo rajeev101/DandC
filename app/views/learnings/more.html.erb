@@ -157,6 +157,7 @@
 .card {
   width: 484px; /* Increased max-width */
   margin: 0 auto;
+
   padding: 30px; /* Increased padding */
   background-color: #fff;
   border-radius: 12px; /* Increased border radius */
@@ -226,11 +227,6 @@ justify-content: space-between; /* Space the items evenly */
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/procast" style="color: #ffffff;">Blogs</a>
-      </li>&nbsp;&nbsp;&nbsp;&nbsp;
-      <li class="nav-item">
-        <a href="/login">
-          <button class="button" style="background-color: white; color: black; padding: 6px 20px; border: none; cursor: pointer;">LOGIN | SIGNUP</button>
-        </a>
       </li>
     </ul>
   </div>
@@ -306,6 +302,7 @@ justify-content: space-between; /* Space the items evenly */
     </div>
   </div>
 </div>
+<div class="registration" style="margin-top: 475px;">
 <%= form_for @registration, url: registration_index_url(@registration) do |f| %>
   <div class="card">
       <h6>Request a Call Back</h6>
@@ -334,6 +331,7 @@ justify-content: space-between; /* Space the items evenly */
       </form>
   </div>
 <% end %>
+</div>
 </div>
 
 <br>
