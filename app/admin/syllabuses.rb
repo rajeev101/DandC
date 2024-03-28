@@ -1,7 +1,7 @@
 ActiveAdmin.register Syllabus do
   actions :index, :show, :create, :edit, :new, :destroy
   permit_params :course_name, :duration, :database, :course_id, :title
-  filter :course, as: :select, collection: Course.all.map { |c| [c.course_name, c.id] }, prompt: 'Select Course'
+  # filter :course, as: :select, collection: Course.all.map { |c| [c.course_name, c.id] }, prompt: 'Select Course'
   filter :title
 
   form do |f|
