@@ -13,7 +13,7 @@ ActiveAdmin.register Topic do
     form do |f|
       f.inputs 'Topic Details' do
         f.input :title
-        f.input :description
+        f.input :description, as: :quill_editor
         f.input :super_sub_category, as: :select, collection: SuperSubCategory.all.map { |c| [c.name, c.id] }, include_blank: false
       end
       f.actions
