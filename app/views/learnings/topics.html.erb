@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .topic-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .topic-item {
+            margin-bottom: 10px;
+        }
+        .topic-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .topic-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Topics </h2>
+    <ul class="topic-list">
+        <% @super_sub_categories.each do |super_sub_category| %>
+            <% super_sub_category.topics.each do |topic| %>
+                <li class="topic-item">
+                    <a href="<%= topic_show_path(topic) %>" style="color: orange;"><%= topic.title %></a>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+</div>
+
+</body>
+</html>

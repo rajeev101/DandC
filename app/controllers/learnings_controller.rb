@@ -16,7 +16,14 @@ class LearningsController < ApplicationController
     @super_sub_categories = SuperSubCategory.all
     @registrations = Registration.all
     @registration = Registration.new
+    @topics = Topic.all
   end
+
+  def topic
+    @super_sub_categories = SuperSubCategory.all
+    render 'learnings/topics'
+  end
+
 
   def procast
     @blogs = Blog.all

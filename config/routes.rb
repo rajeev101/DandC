@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'topic/index'
+  get 'topic/create'
+  get '/topic/show/:id', to: 'topic#show', as: 'topic_show'
   get 'super_sub_categories/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -30,6 +33,8 @@ Rails.application.routes.draw do
   get 'login', to: 'learnings#login', as: 'login'
   get 'more', to: 'learnings#more', as: 'more'
   get 'pdf', to: 'learnings#pdf', as: 'pdf'
+  get 'topic', to: 'learnings#topic', as: 'topic'
+  # get '/topics/:id', to: 'topics#show', as: 'show_topic'
 
   resources :accounts, only: [:new, :create]
 
