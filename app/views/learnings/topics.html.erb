@@ -42,14 +42,14 @@
 <body>
 
 <div class="container">
-	<h2>Topics </h2>
-	<ul class="topic-list">
-		<% @super_sub_category.topics.each do |topic| %>
-			<li class="topic-item">
-				<a href="<%= topic_show_path(topic) %>" style="color: orange;"><%= topic.title %></a>
-			</li>
-		<% end %>
-	</ul>
+    <h2>Topics </h2>
+    <ul class="topic-list">
+        <% @super_sub_category.topics.each do |topic| %>
+            <li class="topic-item">
+                <a href="<%= topic_show_path(topic) %>" style="color: orange;"><%= topic.title %></a>
+            </li>
+        <% end %>
+    </ul>
 </div>
 
 </body>

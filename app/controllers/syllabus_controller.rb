@@ -28,7 +28,7 @@ class SyllabusController < ApplicationController
   end
 
   def syllabus_params
-    params.permit(:course_name, :title, :course_id)
+    params.require(:syllabus).permit(:description, :title, :course_id)
   end
 end
 
