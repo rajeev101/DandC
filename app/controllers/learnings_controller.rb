@@ -20,7 +20,8 @@ class LearningsController < ApplicationController
   end
 
   def topic
-    @super_sub_categories = SuperSubCategory.all
+    @super_sub_category = SuperSubCategory.find_by(params[:id])
+    @topics = @super_sub_category.topics
     render 'learnings/topics'
   end
 

@@ -252,8 +252,8 @@ justify-content: space-between; /* Space the items evenly */
             <div class="content">
               <h6 class="title"><%= subcategory.title %></h6>
               <p class="description">
-                <% subcategory.super_sub_categories.pluck(:name).each do |super_subcategory_name| %>
-                  <a href="<%= topic_path %>" style="color: orange;"><%= super_subcategory_name %></a><br>
+                <% subcategory.super_sub_categories.each do |super_subcategory| %>
+                  <%= link_to super_subcategory.name, topic_path(super_subcategory.id), style: "color: orange;" %><br>
                 <% end %>
               </p>
             </div>
