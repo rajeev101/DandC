@@ -6,9 +6,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  namespace :admin do
-    resources :syllabus
-  end
   resources :learnings do
     get 'more/:category_id', to: 'learnings#more', as: 'more'
   end
@@ -17,6 +14,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :subcategories
   resources :syllabus
+  resources :syllabuses
   resources :registration, only: [:new, :create, :index]
   resources :contacts
   resources :recommendations

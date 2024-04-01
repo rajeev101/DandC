@@ -429,8 +429,6 @@ h2 {
 <%= render "navbar" %>
 
     <div class="background-container">
-
-
         <div class="carousel-caption" style="text-align: left;">
             <div class="elementor-heading-title elementor-size-default" style="margin-bottom: 150px;">
                 <h2>Programming <br> Excellence Begins</h2>
@@ -495,11 +493,14 @@ h2 {
 
 
 
-                    <a href="/more" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
-                        <span>Know more </span>
-                    </a>
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1rem;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+                    <a href="<%= syllabus_url(course) %>" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
+                        <span><%= course.course_name %></span>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1rem;">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
                         </svg>
+                    </a>
+
                     </button>
                 </div>
             </div>

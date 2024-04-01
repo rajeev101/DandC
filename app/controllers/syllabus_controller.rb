@@ -2,14 +2,14 @@ class SyllabusController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @syllabuses = Syllabus.all
+    @syllabuse = Syllabus.all
     render json: @syllabuses
   end
 
   def show
     @syllabus = Syllabus.find(params[:id])
-    render json: @syllabus
   end
+
 
   def create
     @syllabus = Syllabus.new(syllabus_params)
@@ -20,6 +20,7 @@ class SyllabusController < ApplicationController
       render json: { errors: @syllabus.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
 
   private
 
