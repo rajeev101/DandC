@@ -1,5 +1,12 @@
+<style type="text/css">
+		.container {
+		    background-color: rgb(127 199 217 / 28%);
+		    margin-top: -50px
+		}
+</style>
 <%= render 'navbar' %>
-<h1><%= @syllabus.title %></h1>
-
-<h><%=  raw @syllabus.description %></h>
+<div class="container">
+	<h1 class="h1" style="font-weight: bold;"><%= @syllabus.title %></h1>
+	<h><%=  raw @syllabus.description %></h>
+</div>
 <%= render 'footer' %>

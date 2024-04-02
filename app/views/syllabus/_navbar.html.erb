@@ -12,11 +12,6 @@
     img{
         background-image: grey;
     }
-    .container {
-        display: flex;
-        flex-direction: row-reverse;
-        margin-top: -45px;
-    }
     .navbar-light .navbar-nav .nav-link {
         color: white;
         padding-right: 0.5rem;
@@ -425,9 +420,8 @@ h2 {
             </svg>
         </a>
 
-        <div class="container" style="    display: flex;
-    flex-direction: row-reverse; ">
-          <ul class="navbar-nav">
+        <div class="cours" style="display: flex; flex-direction: row-reverse; ">
+          <ul class="navbar-nav" style="margin-left: 310px; margin-top: -15px;">
             <%# if current_user %>
               <li class="nav-item active" style="color: blcak;">
                   <a class="nav-link" href="/learnings" style="color: #ffffff;">Home</a>
