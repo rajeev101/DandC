@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :learnings do
     get 'more/:category_id', to: 'learnings#more', as: 'more'
   end
+  resources :courses do
+    resource :syllabus
+  end
    get '/generate_pdf', to: 'pdf#generate_pdf', as: 'generate_pdf'
   root 'learnings#index'
   resources :categories

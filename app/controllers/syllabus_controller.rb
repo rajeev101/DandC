@@ -1,13 +1,15 @@
 class SyllabusController < ApplicationController
   skip_before_action :verify_authenticity_token
+  # before_action :set_course
 
   def index
-    @syllabuse = Syllabus.all
-    render json: @syllabuses
+    @syllabus = Syllabus.all
+    render json: @syllabus
   end
 
   def show
     @syllabus = Syllabus.find(params[:id])
+    # @syllabus = Syllabus.find_by(id:params[:id])
   end
 
 

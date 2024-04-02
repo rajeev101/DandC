@@ -3,6 +3,7 @@ class CreateSyllabuses < ActiveRecord::Migration[6.1]
     create_table :syllabuses do |t|
       t.references :course, null: false, foreign_key: true
       t.string :course_name
+
       t.string :title
       t.text :description
 
