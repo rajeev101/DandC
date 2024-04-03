@@ -1,12 +1,23 @@
-<style type="text/css">
-		.container {
-		    background-color: rgb(127 199 217 / 28%);
-		    margin-top: -50px
-		}
-</style>
-<%= render 'navbar' %>
-<div class="container">
-	<h1 class="h1" style="font-weight: bold;"><%= @syllabus.title %></h1>
-	<h><%=  raw @syllabus.description %></h>
-</div>
-<%= render 'footer' %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style type="text/css">
+        .container {
+            background-color: rgba(127, 199, 217, 0.28);
+            margin-top: -50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%= render 'navbar' %>
+    <div class="container">
+        <h1 style="font-weight: bold;"><%= @syllabus.title %></h1>
+        <p><%= raw @syllabus.description %></p>
+    </div>
+    <%= render 'footer' %>
+</body>
+</html>
