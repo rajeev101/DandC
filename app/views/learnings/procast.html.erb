@@ -46,29 +46,74 @@ body {
 
      background-image: url('https://www.avanse.com/blogs/images/28feb-blog-2023.jpg');
     }
+    @media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: hsl(0deg 2.65% 6.9% / 78%);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+} 
 </style>
-<nav class="navbar navbar-expand-lg navbar-light bg-#80808017">
-    <!-- <img src="./assets/depthcore" alt="" class="img-fluid" width="70px"> -->
-        <a href="/learnings">
-            <svg width="50" height="50" viewBox="0 0 183 167" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M99.4946 0H27.4946H7.49463V20V53.2541C11.6309 44.3145 18.7127 37.0164 27.4946 32.6049V20H99.4946V20.0019C134.335 20.2706 162.495 48.5967 162.495 83.5C162.495 111.767 144.025 135.721 118.495 143.95V164.711C155.205 155.928 182.495 122.901 182.495 83.5C182.495 37.551 145.381 0.27047 99.4946 0.00146484V0ZM24.5585 138.362C17.6575 129.535 18.7509 117.002 26.771 109.485L14.4264 93.6955C-2.28188 108.047 -4.90408 133.149 8.80262 150.68C22.5093 168.212 47.5022 171.722 65.4615 158.97L53.1164 143.181C43.8862 149.151 31.4596 147.188 24.5585 138.362ZM69.4366 153.948L20.9536 91.9376L36.7081 79.6199L66.4456 117.655C68.5469 113.8 71.4535 110.301 75.1327 107.425C82.2837 101.834 91.0107 99.6424 99.3667 100.613L96.9367 120.465C93.6607 120.117 90.2517 120.991 87.4517 123.181C81.7327 127.651 80.7217 135.911 85.1927 141.63C88.2177 145.499 92.9787 147.213 97.5127 146.532L97.4997 166.623C87.0077 167.233 76.3997 162.854 69.4366 153.948ZM73.1725 51.1098C84.4465 65.5298 81.8965 86.3591 67.4765 97.6334L55.1578 81.8775C60.8761 77.4066 61.8874 69.1468 57.4166 63.4285C52.9457 57.7102 44.6859 56.699 38.9676 61.1698C33.2493 65.6406 32.238 73.9005 36.7089 79.6188L20.953 91.9375C9.67871 77.5175 12.2288 56.6881 26.6488 45.4139C41.0689 34.1396 61.8982 36.6897 73.1725 51.1098Z" fill="blue"/>
-            </svg>
-        </a>
-    <div class="container" >
-        <ul class="navbar-nav">
-            <li class="nav-item active" style="color: black;">
-                <a class="nav-link" href="/learnings">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/jobs">Jobs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/procast">Blogs</a>
-            </li>&nbsp;&nbsp;&nbsp;&nbsp;
-<!--             <li class="nav-item">
-                <%= button_to 'LOGIN | SIGNUP', login_path, method: :get, class: "button", style: "background-color: rgb(80 61 195); color: white; padding: 6px 20px; border: none; cursor: pointer;" %>
-            </li> -->
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-black" id="myHeader" style="z-index: 300; background-color: hsl(0deg 2.65% 6.9% / 78%)">
+    <a href="/learnings">
+        <svg width="50" height="50" viewBox="0 0 183 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M99.4946 0H27.4946H7.49463V20V53.2541C11.6309 44.3145 18.7127 37.0164 27.4946 32.6049V20H99.4946V20.0019C134.335 20.2706 162.495 48.5967 162.495 83.5C162.495 111.767 144.025 135.721 118.495 143.95V164.711C155.205 155.928 182.495 122.901 182.495 83.5C182.495 37.551 145.381 0.27047 99.4946 0.00146484V0ZM24.5585 138.362C17.6575 129.535 18.7509 117.002 26.771 109.485L14.4264 93.6955C-2.28188 108.047 -4.90408 133.149 8.80262 150.68C22.5093 168.212 47.5022 171.722 65.4615 158.97L53.1164 143.181C43.8862 149.151 31.4596 147.188 24.5585 138.362ZM69.4366 153.948L20.9536 91.9376L36.7081 79.6199L66.4456 117.655C68.5469 113.8 71.4535 110.301 75.1327 107.425C82.2837 101.834 91.0107 99.6424 99.3667 100.613L96.9367 120.465C93.6607 120.117 90.2517 120.991 87.4517 123.181C81.7327 127.651 80.7217 135.911 85.1927 141.63C88.2177 145.499 92.9787 147.213 97.5127 146.532L97.4997 166.623C87.0077 167.233 76.3997 162.854 69.4366 153.948ZM73.1725 51.1098C84.4465 65.5298 81.8965 86.3591 67.4765 97.6334L55.1578 81.8775C60.8761 77.4066 61.8874 69.1468 57.4166 63.4285C52.9457 57.7102 44.6859 56.699 38.9676 61.1698C33.2493 65.6406 32.238 73.9005 36.7089 79.6188L20.953 91.9375C9.67871 77.5175 12.2288 56.6881 26.6488 45.4139C41.0689 34.1396 61.8982 36.6897 73.1725 51.1098Z" fill="white"/>
+        </svg>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container">
+            <ul class="navbar-nav ml-auto">
+                <%# if current_user %>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/learnings" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jobs" style="color: white;">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/procast" style="color: white;">Blogs</a>
+                    </li>
+                <%# else %>
+                    <!-- <li class="nav-item">
+                        <%= link_to 'Login | Signup', login_path, class: "nav-link" %>
+                    </li> -->
+                <%# end %>
+            </ul>
+        </div>
     </div>
 </nav>
 <% @blogs.each do |blog| %>
