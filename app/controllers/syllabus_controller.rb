@@ -8,8 +8,8 @@ class SyllabusController < ApplicationController
   end
 
   def show
-    @syllabus = Syllabus.find(params[:id])
-    # @syllabus = Syllabus.find_by(id:params[:id])
+    @course = Course.find(params[:id])
+    @syllabus = @course.syllabuses
   end
 
 
@@ -34,4 +34,3 @@ class SyllabusController < ApplicationController
     params.require(:syllabus).permit(:description, :title, :course_id)
   end
 end
-

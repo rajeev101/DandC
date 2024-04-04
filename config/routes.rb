@@ -10,14 +10,14 @@ Rails.application.routes.draw do
     get 'more/:category_id', to: 'learnings#more', as: 'more'
   end
   resources :courses do
-    resource :syllabus
+    resources :syllabus, only: [:index, :show, :create]
   end
    get '/generate_pdf', to: 'pdf#generate_pdf', as: 'generate_pdf'
   root 'learnings#index'
   resources :categories
   resources :subcategories
-  resources :syllabus
-  resources :syllabuses
+  # resources :syllabus
+  # resources :syllabuses
   resources :registration, only: [:new, :create, :index]
   resources :contacts
   resources :recommendations

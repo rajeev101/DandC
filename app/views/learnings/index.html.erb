@@ -40,8 +40,8 @@
 }
     button {
         background-color: blue;
-        color: white; 
-        padding: 10px 20px; 
+        color: white;
+        padding: 10px 20px;
         border: none;
         cursor: pointer;
         border: 2px solid white;
@@ -53,7 +53,7 @@
         border: none;
         cursor: pointer;
         border: 0px solid white;
-    } 
+    }
     .centered {
         position: absolute;
         top: 50%;
@@ -62,7 +62,7 @@
     }
     .background-container {
        height: 500px;
-        overflow: auto; 
+        overflow: auto;
         position: relative;
         background-attachment: fixed;
         background-position: center;
@@ -95,10 +95,10 @@
         padding: 10px;
         border-radius: 8px;
         margin: 20px -19px;
-        
+
     }
     .plan-header {
-        
+
         color: white;
         padding: 8px;
         text-align: center;
@@ -235,7 +235,7 @@ h1{
 
 .faq-toggle .close{
   display: none;
-} 
+}
 
 .faq.active .faq-toggle .close{
   display: block;
@@ -386,7 +386,7 @@ h3.faq-title {
   }
   .btn-primary {
     background-color: red;
-  } 
+  }
 
   .carousel-indicators {
     bottom: 0px;
@@ -402,7 +402,7 @@ h3.faq-title {
 /*        background-color: rgba(0, 0, 0, 0.5); */
     }
 
- 
+
 
 
 h2 {
@@ -444,7 +444,7 @@ h2 {
         <div class="test" style="font-weight: bold; font-size: 33px;">
             <br><br>
             <div class="join">Courses</div>
-      
+
         </div>
     </div>
 </div>
@@ -455,7 +455,7 @@ h2 {
         <div class="subscription-plan">
             <div class="plan-header">
                 <%= image_tag course.image if course.image.attached? %>
-                    
+
             </div>
             <div class="plan-details">
                 <div class="d-flex align-items-center"><span class="badge me-2" style="background-color: rgb(127 199 217 / 97%); color: white; font-weight: bold;">Intern</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color:  rgb(127 199 217 / 97%);color: white; font-weight: bold;">Students</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color: rgb(127 199 217 / 97%);color: white; font-weight: bold;">SDE-1/2/3</span>
@@ -495,14 +495,14 @@ h2 {
                 <div class="live" style="color: red;">(60% OFF)</div>
                     <span class="Home_actual__18qzZ" style="color: black; margin: 10px; font-weight: bold;">
                         <span style="text-decoration: line-through; color: grey;">₹<%= course.price %>
-                            
+
                         </span>₹<%= course.discounted_price %>
                     </span>
-                    <a href="<%= syllabus_url(course) %>" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
+                    <a href="<%= course_syllabus_path(course.id, course.id) %>" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
                         <span>Know more</span>
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1rem;">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
                         </svg>
                     </a>
 
@@ -643,7 +643,7 @@ h2 {
 
     .member {
         transform-origin: center;
-        transition: transform 0.5s ease-in-out; 
+        transition: transform 0.5s ease-in-out;
     }
 
     .member:hover {
@@ -665,7 +665,7 @@ h2 {
 
     .plan-header {
         overflow: hidden;
-        transition: transform 0.5s ease-in-out; 
+        transition: transform 0.5s ease-in-out;
     }
 
     .plan-header:hover {
@@ -673,8 +673,8 @@ h2 {
     }
 
     .plan-header img {
-        width: 100%; 
-        height: auto; 
-        display: block; 
+        width: 100%;
+        height: auto;
+        display: block;
     }
 </style>

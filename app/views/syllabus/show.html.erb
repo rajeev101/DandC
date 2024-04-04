@@ -15,8 +15,10 @@
 <body>
     <%= render 'navbar' %>
     <div class="container">
-        <h1 style="font-weight: bold;"><%= @syllabus.title %></h1>
-        <p><%= raw @syllabus.description %></p>
+        <% @course.syllabuses.each do |syllabus| %>
+            <h1 style="font-weight: bold;"><%= syllabus.title %></h1>
+            <p><%= raw syllabus.description %></p>
+        <% end %>
     </div>
     <%= render 'footer' %>
 </body>
