@@ -11,6 +11,7 @@
         margin: 0;
         padding: 0;
         background-color: #fafafa;
+/*        width: 100%;*/
 
     }
     .text-center{
@@ -22,7 +23,8 @@
     .container {
         display: flex;
         flex-direction: row-reverse;
-        margin-top: -45px;
+        padding: 10px;
+/*        margin-top: -45px;*/
     }
     .navbar-light .navbar-nav .nav-link {
         color: white;
@@ -36,7 +38,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
-    margin-bottom: -37px;
+/*    margin-bottom: -37px;*/
 }
     button {
         background-color: blue;
@@ -71,9 +73,6 @@
         background-color: #2f2fd3;
 
     background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
-
-
-
     }
     .content {
         color: white;
@@ -95,7 +94,7 @@
         padding: 10px;
         border-radius: 8px;
         margin: 20px -19px;
-
+        
     }
     .plan-header {
 
@@ -129,7 +128,7 @@
         display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        margin-left: 51px;
+        margin-left: 9px;
         margin-top: 107px;
         width: 95%;
     }
@@ -157,7 +156,7 @@
         vertical-align: middle;
         margin-right: 4px;
         font-size: 15px;
-    }<div class="background-container">
+    }
     h4 {
         display: flex;
         justify-content: center;
@@ -188,7 +187,7 @@ h1{
     border: 1px solid #f0efef;
     border-radius: 10px;
     padding: 17px;
-    margin: 16px -183px;f
+    margin: 16px -183px;
     position: relative;
     overflow: hidden;
     transition: all .4s e
@@ -250,6 +249,18 @@ h1{
   border-radius: 50%;
   color:#ffffd9;
 }
+    @media (max-width: 635px) {
+      .faq {
+        background-color: #44414112;
+        border: 1px solid #f0efef;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        transition: all .4s e;
+    }
+    }
 h3{
     font-size: 15px;
 }
@@ -373,7 +384,7 @@ h3.faq-title {
 
 
 
-  .image-slider {
+/*  .image-slider {
     display: flex;
     transition: transform 30s ease;
   }
@@ -390,16 +401,17 @@ h3.faq-title {
 
   .carousel-indicators {
     bottom: 0px;
-  }
+  }*/
 
     .carousel-caption {
         position: absolute;
-        left: 0;
+/*        left: 0;*/
         right: auto;
-        bottom: 0;
+/*        bottom: 0;*/
         z-index: 10;
         padding: 20px;
-/*        background-color: rgba(0, 0, 0, 0.5); */
+        bottom: 143px;
+        left: 2%;
     }
 
 
@@ -424,13 +436,76 @@ h2 {
 .sticky + .content {
   padding-top: 102px;
 }
+.background-container {
+    height: 500px;
+    overflow: hidden; 
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    background-color: #2f2fd3; 
+    background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    .background-container {
+        min-height: 400px; /* Smaller height for smaller devices */
+        background-attachment: scroll; /* Adjusts background behavior for better mobile performance */
+        background-size: cover; /* Continues to cover the available space */
+          width: 100%;
+          height: auto;
+    }
+    .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        z-index: 6;
+        padding: 21px;
+        bottom: -23px;
+        left: 0%;
+        font-size: 16px;
+    }
+}
+@media (max-width: 335px){
+        .program {
+        font-size: 42px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 29px;
+        line-height: 35px;
+        letter-spacing: 0.5px;
+        word-spacing: 6px;
+    }
+
+}
+
+@media (max-width:  767px){
+    .course-container {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    padding: 0px;
+    margin-left: 267px;
+    }
+    .subscription-plan {
+    max-width: 310px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 0px -19px;
+}
+}
 </style>
 <body>
 <%= render "navbar" %>
 <div class="background-container">
     <div class="carousel-caption" style="text-align: left;">
-        <div class="elementor-heading-title elementor-size-default" style="margin-bottom: 150px;">
-            <h2>Programming <br> Excellence Begins</h2>
+        <div class="elementor-heading-title elementor-size-default" style="">
+            <h2 class="program">Programming <br> Excellence Begins</h2>
             <p class="size" style="font-size: 20px; color: white;">
                 <strong>Depth and Core is a leading training and placement company</strong><br>
                 <strong>that provides a wide range of services for students, professionals,</strong><br>
@@ -439,194 +514,188 @@ h2 {
         </div>
     </div>
 </div>
-<div class="course" id="Courses"><br><br>
+<div class="course" id="Courses">
     <div class="container" style="background-color: rgb(238, 245, 255);"><br>
         <div class="test" style="font-weight: bold; font-size: 33px;">
-            <br><br>
             <div class="join">Courses</div>
 
         </div>
     </div>
 </div>
 <br>
-<div class="course-container" style="background-color: rgb(238, 245, 255); margin-top: -24px;">
-    <% @courses.each do |course| %>
-    <div class="container" style=" width: 30%; margin-bottom: 20px">
-        <div class="subscription-plan">
-            <div class="plan-header">
-                <%= image_tag course.image if course.image.attached? %>
+<div class="background-color" style="background-color: rgb(238, 245, 255);">
+    <div class="course-container" style="margin-top: -24px;">
+        <% @courses.each do |course| %>
+        <div class="container" style=" width: 30%; margin-bottom: 20px">
+            <div class="subscription-plan">
+                <div class="plan-header">
+                    <%= image_tag course.image if course.image.attached? %>
 
+                </div>
+                <div class="plan-details">
+                    <div class="d-flex align-items-center"><span class="badge me-2" style="background-color: rgb(127 199 217 / 97%); color: white; font-weight: bold;">Intern</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color:  rgb(127 199 217 / 97%);color: white; font-weight: bold;">Students</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color: rgb(127 199 217 / 97%);color: white; font-weight: bold;">SDE-1/2/3</span>
+                    </div>
+                    <p></p>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9 10v8l7-4zm12-4h-7.58l3.29-3.29L16 2l-4 4h-.03l-4-4-.69.71L10.56 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.live_classes %>&nbsp;
+                    </div>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path d="M17 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H7V0H9V2H15V0H17V2ZM17 4V6H15V4H9V6H7V4H5V20H19V4H17ZM7 8H17V10H7V8ZM7 12H17V14H7V12Z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.quizzes %> &nbsp;
+                    </div>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path fill="none" d="M0 0h24v24H0z"></path><path d="M22 5.18L10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zM12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c1.57 0 3.04.46 4.28 1.25l1.45-1.45A10.02 10.02 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.73 0 3.36-.44 4.78-1.22l-1.5-1.5c-1 .46-2.11.72-3.28.72zm7-5h-3v2h3v3h2v-3h3v-2h-3v-3h-2v3z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.projects %>&nbsp;
+                    </div>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path fill="none" d="M0 0h24v24H0z"></path><path d="M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62z"></path><circle cx="9" cy="13" r="1"></circle><circle cx="15" cy="13" r="1"></circle><path d="M18 11.03A6.04 6.04 0 0012.05 6c-3.03 0-6.29 2.51-6.03 6.45a8.075 8.075 0 004.86-5.89c1.31 2.63 4 4.44 7.12 4.47z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.doubt_support %> &nbsp;
+                    </div>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path d="M5 8V20H19V8H5ZM5 6H19V4H5V6ZM20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM7 10H11V14H7V10ZM7 16H17V18H7V16ZM13 11H17V13H13V11Z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.interview_questions_covered %>&nbsp;
+                    </div>
+                    <div class="live" style="font-weight: bold;">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
+                            <path d="M12 11.16c.887-.933 1.813-1.865 2.78-2.6C15.952 7.668 17.267 7 18.75 7 21.657 7 24 9.615 24 12.25s-2.343 5.25-5.25 5.25c-1.483 0-2.798-.668-3.97-1.56-.967-.735-1.893-1.667-2.78-2.6-.887.933-1.813 1.865-2.78 2.6-1.172.892-2.487 1.56-3.97 1.56C2.343 17.5 0 14.885 0 12.25S2.343 7 5.25 7c1.483 0 2.798.667 3.97 1.56.967.735 1.893 1.667 2.78 2.6ZM5.25 8.5c-2.032 0-3.75 1.895-3.75 3.75S3.218 16 5.25 16c1.017 0 2.014-.457 3.062-1.253.89-.678 1.758-1.554 2.655-2.497-.897-.943-1.765-1.82-2.655-2.497C7.264 8.957 6.267 8.5 5.25 8.5Zm7.783 3.75c.897.943 1.765 1.82 2.655 2.497C16.736 15.543 17.733 16 18.75 16c2.032 0 3.75-1.895 3.75-3.75S20.782 8.5 18.75 8.5c-1.017 0-2.014.457-3.062 1.253-.89.678-1.758 1.554-2.655 2.497Z"></path>
+                        </svg>&nbsp;&nbsp;&nbsp;<%= course.lifetime_access %>&nbsp;
+                    </div>
+                    <br>
+                    <div class="live" style="color: red;">(60% OFF)</div>
+                        <span class="Home_actual__18qzZ" style="color: black; margin: 10px; font-weight: bold;">
+                            <span style="text-decoration: line-through; color: grey;">₹<%= course.price %>
+
+                            </span>₹<%= course.discounted_price %>
+                        </span>
+                        <a href="<%= course_syllabus_path(course.id, course.id) %>" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
+                            <span>Know more</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1rem;">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
             </div>
-            <div class="plan-details">
-                <div class="d-flex align-items-center"><span class="badge me-2" style="background-color: rgb(127 199 217 / 97%); color: white; font-weight: bold;">Intern</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color:  rgb(127 199 217 / 97%);color: white; font-weight: bold;">Students</span>&nbsp;&nbsp;<span class="badge me-2" style="background-color: rgb(127 199 217 / 97%);color: white; font-weight: bold;">SDE-1/2/3</span>
-                </div>
-                <p></p>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9 10v8l7-4zm12-4h-7.58l3.29-3.29L16 2l-4 4h-.03l-4-4-.69.71L10.56 6H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 14H3V8h18v12z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.live_classes %>&nbsp;
-                </div>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path d="M17 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H7V0H9V2H15V0H17V2ZM17 4V6H15V4H9V6H7V4H5V20H19V4H17ZM7 8H17V10H7V8ZM7 12H17V14H7V12Z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.quizzes %> &nbsp;
-                </div>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path fill="none" d="M0 0h24v24H0z"></path><path d="M22 5.18L10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zM12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8c1.57 0 3.04.46 4.28 1.25l1.45-1.45A10.02 10.02 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.73 0 3.36-.44 4.78-1.22l-1.5-1.5c-1 .46-2.11.72-3.28.72zm7-5h-3v2h3v3h2v-3h3v-2h-3v-3h-2v3z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.projects %>&nbsp;
-                </div>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path fill="none" d="M0 0h24v24H0z"></path><path d="M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62z"></path><circle cx="9" cy="13" r="1"></circle><circle cx="15" cy="13" r="1"></circle><path d="M18 11.03A6.04 6.04 0 0012.05 6c-3.03 0-6.29 2.51-6.03 6.45a8.075 8.075 0 004.86-5.89c1.31 2.63 4 4.44 7.12 4.47z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.doubt_support %> &nbsp;
-                </div>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path d="M5 8V20H19V8H5ZM5 6H19V4H5V6ZM20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM7 10H11V14H7V10ZM7 16H17V18H7V16ZM13 11H17V13H13V11Z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.interview_questions_covered %>&nbsp;
-                </div>
-                <div class="live" style="font-weight: bold;">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" color="red" font-size="1.5rem" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: red;">
-                        <path d="M12 11.16c.887-.933 1.813-1.865 2.78-2.6C15.952 7.668 17.267 7 18.75 7 21.657 7 24 9.615 24 12.25s-2.343 5.25-5.25 5.25c-1.483 0-2.798-.668-3.97-1.56-.967-.735-1.893-1.667-2.78-2.6-.887.933-1.813 1.865-2.78 2.6-1.172.892-2.487 1.56-3.97 1.56C2.343 17.5 0 14.885 0 12.25S2.343 7 5.25 7c1.483 0 2.798.667 3.97 1.56.967.735 1.893 1.667 2.78 2.6ZM5.25 8.5c-2.032 0-3.75 1.895-3.75 3.75S3.218 16 5.25 16c1.017 0 2.014-.457 3.062-1.253.89-.678 1.758-1.554 2.655-2.497-.897-.943-1.765-1.82-2.655-2.497C7.264 8.957 6.267 8.5 5.25 8.5Zm7.783 3.75c.897.943 1.765 1.82 2.655 2.497C16.736 15.543 17.733 16 18.75 16c2.032 0 3.75-1.895 3.75-3.75S20.782 8.5 18.75 8.5c-1.017 0-2.014.457-3.062 1.253-.89.678-1.758 1.554-2.655 2.497Z"></path>
-                    </svg>&nbsp;&nbsp;&nbsp;<%= course.lifetime_access %>&nbsp;
-                </div>
-                <br>
-                <div class="live" style="color: red;">(60% OFF)</div>
-                    <span class="Home_actual__18qzZ" style="color: black; margin: 10px; font-weight: bold;">
-                        <span style="text-decoration: line-through; color: grey;">₹<%= course.price %>
+            <% end %>
+        </div>
+    </div>
+</div>
 
-                        </span>₹<%= course.discounted_price %>
-                    </span>
-                    <a href="<%= course_syllabus_path(course.id, course.id) %>" type="button" colorscheme="red" class="Button_button__Rzx8I sc-dhKdcB kpMGBC btn btn-outline-primary rounded btn-sm">
-                        <span>Know more</span>
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="font-size: 1rem;">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
-                        </svg>
+
+        <h1>Advantages Of Joining Us</h1>
+        <div class="row justify-content-center gap-4">
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 67, 129);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;">
+                        <path d="M16 4C16.5523 4 17 4.44772 17 5V9.2L22.2133 5.55071C22.4395 5.39235 22.7513 5.44737 22.9096 5.6736C22.9684 5.75764 23 5.85774 23 5.96033V18.0397C23 18.3158 22.7761 18.5397 22.5 18.5397C22.3974 18.5397 22.2973 18.5081 22.2133 18.4493L17 14.8V19C17 19.5523 16.5523 20 16 20H2C1.44772 20 1 19.5523 1 19V5C1 4.44772 1.44772 4 2 4H16ZM7.4 8.82867C7.2067 8.82867 7.04543 8.96578 7.00813 9.14806L7 9.22867V14.7713C7 14.8474 7.02169 14.9219 7.06254 14.9861C7.16631 15.1492 7.36858 15.2116 7.54238 15.1452L7.61475 15.1088L11.9697 12.3375C12.0191 12.306 12.061 12.2641 12.0924 12.2148C12.1962 12.0517 12.1671 11.842 12.0333 11.7127L11.9697 11.6625L7.61475 8.8912C7.55057 8.85036 7.47607 8.82867 7.4 8.82867Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live classes by Instructors</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(231, 102, 131);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">1:1 mentorship</h4><p></p>
+                     </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(80, 143, 167);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10.27 12h3.46a1.5 1.5 0 001.48-1.75l-.3-1.79a2.951 2.951 0 00-5.82.01l-.3 1.79c-.15.91.55 1.74 1.48 1.74zM1.66 11.11c-.13.26-.18.57-.1.88.16.69.76 1.03 1.53 1h1.95c.83 0 1.51-.58 1.51-1.29 0-.14-.03-.27-.07-.4-.01-.03-.01-.05.01-.08.09-.16.14-.34.14-.53 0-.31-.14-.6-.36-.82-.03-.03-.03-.06-.02-.1.07-.2.07-.43.01-.65a1.12 1.12 0 00-.99-.74.09.09 0 01-.07-.03C5.03 8.14 4.72 8 4.37 8c-.3 0-.57.1-.75.26-.03.03-.06.03-.09.02a1.24 1.24 0 00-1.7 1.03c0 .02-.01.04-.03.06-.29.26-.46.65-.41 1.05.03.22.12.43.25.6.03.02.03.06.02.09zM16.24 13.65c-1.17-.52-2.61-.9-4.24-.9-1.63 0-3.07.39-4.24.9A2.988 2.988 0 006 16.39V18h12v-1.61c0-1.18-.68-2.26-1.76-2.74zM1.22 14.58A2.01 2.01 0 000 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58zM22.78 14.58A6.95 6.95 0 0020 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57c0-.81-.48-1.53-1.22-1.85zM22 11v-.5c0-1.1-.9-2-2-2h-2c-.42 0-.65.48-.39.81l.7.63c-.19.31-.31.67-.31 1.06 0 1.1.9 2 2 2s2-.9 2-2z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Connect with Peer Group</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(222, 174, 49);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M152,96V80h-8a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h8V160a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16v48a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V192h-8a32,32,0,0,1-32-32V136H80v8a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V112A16,16,0,0,1,32,96H64a16,16,0,0,1,16,16v8h32V96a32,32,0,0,1,32-32h8V48a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16V96a16,16,0,0,1-16,16H168A16,16,0,0,1,152,96Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Structured Curriculum</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(167, 104, 215);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Lifetime access to the recordings</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 140, 255);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live doubt support</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(179, 34, 94);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 1h6v2H9zM19.03 7.39l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4a9 9 0 00-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 007.03-14.61zM13 14h-2V8h2v6z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Flexible</h4><p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(35, 145, 23);">
+                    <div class="text-white">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg>&nbsp;&nbsp;&nbsp;
+                        <h4 class="h4" style="font-size: 22px;">Cash prize in every class</h4><p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>Companies behind top notch instructor</h1>
+        <br><br>
+        <div class="container" style="display: flex; flex-direction: column;">
+            <img alt="companies" src="https://i.postimg.cc/h4X98SXk/Screenshot-2023-07-08-150931.png">
+        </div>
+
+
+        <h1 class="companies" style="color: black; font-size: 32px;">Frequently Asked Questions</h1>
+        <% @faqs.each do |faq| %>
+        <div class='faq-container'>
+            <div class="faq">
+                <h3 class="faq-title" style="background-color: #44414100; color: black;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(4, 83, 153)" class="bi bi-question-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                    </svg>
+                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="collapsed" aria-expanded="false">
+                        <%= faq.question %>
+                        <i class="bx bx-chevron-down icon-show"></i>
+                        <i class="bx bx-chevron-up icon-close"></i>
                     </a>
-
+                </h3>
+                <div id="faq-list-<%= faq.id %>" class="collapse" data-bs-parent=".faq-list"><br>
+                    <p class="answer" style="font-size: 18px;"><%= faq.answer %></p>
                 </div>
             </div>
         </div>
         <% end %>
+
+
+        <div class="instructor" id="Instructors">
+            <%= render "instructors" %>
+        </div>
+
+        <%= render "recommendation" %>
+
+
+        <div class="Inquiry" id="Request Callback"><br><br>
+            <h1>Submit the form for Inquiry</h1><br><br>
+            <%= render "contact" %>
+        </div>
+
+        <%= render "footer" %>
     </div>
 
-
-    <h1>Advantages Of Joining Us</h1>
-    <div class="row justify-content-center gap-4">
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 67, 129);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;">
-                    <path d="M16 4C16.5523 4 17 4.44772 17 5V9.2L22.2133 5.55071C22.4395 5.39235 22.7513 5.44737 22.9096 5.6736C22.9684 5.75764 23 5.85774 23 5.96033V18.0397C23 18.3158 22.7761 18.5397 22.5 18.5397C22.3974 18.5397 22.2973 18.5081 22.2133 18.4493L17 14.8V19C17 19.5523 16.5523 20 16 20H2C1.44772 20 1 19.5523 1 19V5C1 4.44772 1.44772 4 2 4H16ZM7.4 8.82867C7.2067 8.82867 7.04543 8.96578 7.00813 9.14806L7 9.22867V14.7713C7 14.8474 7.02169 14.9219 7.06254 14.9861C7.16631 15.1492 7.36858 15.2116 7.54238 15.1452L7.61475 15.1088L11.9697 12.3375C12.0191 12.306 12.061 12.2641 12.0924 12.2148C12.1962 12.0517 12.1671 11.842 12.0333 11.7127L11.9697 11.6625L7.61475 8.8912C7.55057 8.85036 7.47607 8.82867 7.4 8.82867Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Live classes by Instructors</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(231, 102, 131);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>1:1 mentorship</h4><p></p>
-                 </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(80, 143, 167);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10.27 12h3.46a1.5 1.5 0 001.48-1.75l-.3-1.79a2.951 2.951 0 00-5.82.01l-.3 1.79c-.15.91.55 1.74 1.48 1.74zM1.66 11.11c-.13.26-.18.57-.1.88.16.69.76 1.03 1.53 1h1.95c.83 0 1.51-.58 1.51-1.29 0-.14-.03-.27-.07-.4-.01-.03-.01-.05.01-.08.09-.16.14-.34.14-.53 0-.31-.14-.6-.36-.82-.03-.03-.03-.06-.02-.1.07-.2.07-.43.01-.65a1.12 1.12 0 00-.99-.74.09.09 0 01-.07-.03C5.03 8.14 4.72 8 4.37 8c-.3 0-.57.1-.75.26-.03.03-.06.03-.09.02a1.24 1.24 0 00-1.7 1.03c0 .02-.01.04-.03.06-.29.26-.46.65-.41 1.05.03.22.12.43.25.6.03.02.03.06.02.09zM16.24 13.65c-1.17-.52-2.61-.9-4.24-.9-1.63 0-3.07.39-4.24.9A2.988 2.988 0 006 16.39V18h12v-1.61c0-1.18-.68-2.26-1.76-2.74zM1.22 14.58A2.01 2.01 0 000 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58zM22.78 14.58A6.95 6.95 0 0020 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57c0-.81-.48-1.53-1.22-1.85zM22 11v-.5c0-1.1-.9-2-2-2h-2c-.42 0-.65.48-.39.81l.7.63c-.19.31-.31.67-.31 1.06 0 1.1.9 2 2 2s2-.9 2-2z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Connect with Peer Group</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(222, 174, 49);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M152,96V80h-8a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h8V160a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16v48a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V192h-8a32,32,0,0,1-32-32V136H80v8a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V112A16,16,0,0,1,32,96H64a16,16,0,0,1,16,16v8h32V96a32,32,0,0,1,32-32h8V48a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16V96a16,16,0,0,1-16,16H168A16,16,0,0,1,152,96Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Structured Curriculum</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(167, 104, 215);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Lifetime access to the recordings</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 140, 255);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Live doubt support</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(179, 34, 94);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 1h6v2H9zM19.03 7.39l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4a9 9 0 00-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 007.03-14.61zM13 14h-2V8h2v6z"></path></svg>&nbsp;&nbsp;&nbsp;<h4>Flexible</h4><p></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-            <div class="member d-flex align-items-center gap-2" style="background-color: rgb(35, 145, 23);">
-                <div class="text-white">
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg>&nbsp;&nbsp;&nbsp;
-                    <h4>Cash prize in every class</h4><p></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <h1>Companies behind top notch instructor</h1>
-    <br><br>
-    <div class="container" style="display: flex; flex-direction: column;">
-        <img alt="companies" src="https://i.postimg.cc/h4X98SXk/Screenshot-2023-07-08-150931.png">
-<!--         <div class="text-center" style="background-color: white;">
-            <div class="com" style="background-color: white;">
-                <img alt="companies" src="./assets/down" width="200">
-                <img alt="companies" src="./assets/datazen" width="200">
-                <img alt="companies" src="./assets/infotech" width="200">
-                <img alt="companies" src="./assets/pixoaticsol" width="200">
-                <img alt="companies" src="./assets/down" width="200">
-            </div>
-        </div> -->
-    </div>
-    <h1 class="companies" style="color: black; font-size: 32px;">Frequently Asked Questions</h1>
-    <% @faqs.each do |faq| %>
-    <div class='faq-container'>
-        <div class="faq">
-            <h3 class="faq-title" style="background-color: #44414100; color: black;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(4, 83, 153)" class="bi bi-question-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-                </svg>
-                <a data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="collapsed" aria-expanded="false">
-                    <%= faq.question %>
-                    <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-            </h3>
-            <div id="faq-list-<%= faq.id %>" class="collapse" data-bs-parent=".faq-list"><br>
-                <p class="answer" style="font-size: 18px;"><%= faq.answer %></p>
-            </div>
-        </div>
-    </div>
-    <% end %>
-
-
-    <div class="instructor" id="Instructors">
-        <%= render "instructors" %>
-    </div>
-
-    <%= render "recommendation" %>
-
-
-    <div class="Inquiry" id="Request Callback"><br><br>
-        <h1>Submit the form for Inquiry</h1><br><br>
-        <%= render "contact" %>
-    </div>
-
-    <%= render "footer" %>
-</div>
 </body>
 <style>
     @keyframes scaleAnimation {
@@ -678,3 +747,4 @@ h2 {
         display: block;
     }
 </style>
+

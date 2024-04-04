@@ -2,15 +2,41 @@
     .circular-image {
       width: 100px;
       border-radius: 50%;
-}
-.count-container {
-    padding: 2px;
-    margin-left: 72px;
-    margin-right: 72px;
-    margin-top: -88px;
-}
+    }
+    .count-container {
+        padding: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -88px;
+    }
+    /* Responsive CSS */
+    @media (min-width: 576px) {
+        .count-container {
+            margin-left: 48px;
+            margin-right: 48px;
+        }
+    }
+    @media (min-width: 768px) {
+        .count-container {
+            margin-left: 72px;
+            margin-right: 72px;
+        }
+    }
+    @media (min-width: 992px) {
+        .count-container {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .count-container {
+            margin-left: 120px;
+            margin-right: 120px;
+        }
+    }
 </style>
-<h1 id="Instructors">Instructors</h1><br>
+
+<h1 id="Instructors">Instructors</h1>
 <div class="count-container">
   <div class="carousel slide" id="myCarousel" data-ride="carousel">
     <div class="carousel-inner">
