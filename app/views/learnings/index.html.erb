@@ -100,7 +100,7 @@
         padding: 10px;
         border-radius: 8px;
         margin: 0px -19px;
-        
+
     }
     .plan-header {
 
@@ -444,48 +444,121 @@ h2 {
 }
 .background-container {
     height: 500px;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center; 
-    background-color: #2f2fd3; 
+    align-items: center;
+    background-color: #2f2fd3;
     background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media (max-width: 767px) {
-    .background-container {
-        min-height: 400px; /* Smaller height for smaller devices */
-        background-attachment: scroll; /* Adjusts background behavior for better mobile performance */
-        background-size: cover; /* Continues to cover the available space */
-          width: 100%;
-          height: auto;
-    }
-    .carousel-caption {
-        position: absolute;
-        left: 0;
-        right: auto;
-        bottom: 0;
-        z-index: 6;
-        padding: 21px;
-        bottom: -23px;
-        left: 0%;
-        font-size: 16px;
-        margin-bottom: 71px;
-    }
-    h2{
-        font-size: 34px;
-    line-height: 45px;
+.modal-content {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 0.3rem;
+	outline: 0;
+	width: 710px;
+	height: 570px;
+}
 
-    }
-/*    p.size {
-    font-size: 12px;
-    color: white;
-    margin-top: 122px;
-}*/
+.modal-header .close {
+	padding: 0rem 0rem;
+	margin: 0rem 0rem 0rem auto;
+	color: white;
+	background-color: orangered;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-top: -15px;
+    width: 100%;
+}
+
+h1.content-h1 {
+    font-size: 35px;
+    color: yellow;
+    margin-top: 15px;
+}
+
+.col-md-6.ms-auto.left-up {
+	display: block;
+	background-color: blue;
+	height: 225px;
+}
+
+.col-md-6.ms-auto.right-up {
+	display: block;
+	background-color: #451472;
+	height: 225px;
+}
+
+.col-md-6.ms-auto.left-down {
+	display: block;
+	background-color: #35af35;
+	height: 225px;
+	margin-top: 45px;
+}
+
+.col-md-6.ms-auto.right-down {
+	display: block;
+	background-color: #d75c13;
+	height: 225px;
+	margin-top: 45px;
+}
+
+.register-btn {
+	cursor: pointer;
+	border-radius: 80px;
+	color: yellow;
+	background: darkslategray;
+	border: none;
+	float: right;
+}
+
+@media (max-width: 767px) {
+	.background-container {
+			min-height: 400px; /* Smaller height for smaller devices */
+			background-attachment: scroll; /* Adjusts background behavior for better mobile performance */
+			background-size: cover; /* Continues to cover the available space */
+				width: 100%;
+				height: auto;
+	}
+	.carousel-caption {
+			position: absolute;
+			left: 0;
+			right: auto;
+			bottom: 0;
+			z-index: 6;
+			padding: 21px;
+			bottom: -23px;
+			left: 0%;
+			font-size: 16px;
+			margin-bottom: 71px;
+	}
+	h2{
+			font-size: 34px;
+	line-height: 45px;
+
+	}
 }
 @media (max-width: 335px){
         .program {
@@ -522,6 +595,65 @@ h2 {
 </style>
 <body>
 <%= render "navbar" %>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 15px; padding: 22px 0 0px 110px; color: blue;">Free DEMO's for Offline & Online training</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 ms-auto left-up">
+						<h1 class="content-h1">Full Stack JAVA</h1>
+						<span style="color: white; margin-left: 40px;">from 1 - April @ 11:00 AM (IST)</span>
+						<p style="color: white; font-size: 15px; margin-left:22px">
+							by<br>
+							Mr. Hari Krishna
+						</p>
+						<br>
+						<button class="register-btn">Register Now!</button>
+					</div>
+					<div class="col-md-6 ms-auto right-up">
+						<h1 class="content-h1">Python Full Stack</h1>
+						<span style="color: white; margin-left: 30px;">from 29 - MAR @ 08:10 AM (IST)</span>
+						<p style="color: white; font-size: 15px;margin-left:22px ">
+							by<br>
+							Mr. Satish Gupta
+						</p>
+						<br>
+						<button class="register-btn">Register Now!</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 ms-auto left-down">
+						<h1 class="content-h1">DATA SCIENCE</h1>
+						<span style="color: white; margin-left: 43px;">from 1 - April @ 08:03 AM (IST)</span>
+						<p style="color: white; font-size: 15px; margin-left:22px">
+							by<br />
+							Mr. Daniel
+						</p>
+						<br>
+						<button class="register-btn">Register Now!</button>
+					</div>
+					<div class="col-md-6 ms-auto right-down">
+						<h1 class="content-h1">AWS</h1>
+						<span style="color: white; margin-left: 43px;">from 1 - April @ 07:30 AM (IST)</span>
+						<p style="color: white; font-size: 15px; margin-left:22px">
+							by<br>
+							Mr. Hari Krishna
+						</p>
+						<br>
+						<button class="register-btn">Register Now!</button>
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="background-container">
     <div class="carousel-caption" style="text-align: left;">
         <div class="elementor-heading-title elementor-size-default" style="">
@@ -689,7 +821,7 @@ h2 {
                     <a data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="collapsed" aria-expanded="false">
                         <%= faq.question %>
                     </a>
-                    
+
 
                     <svg class="e-font-icon-svg e-fas-chevron-down" width="12" height="auto" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                         <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
@@ -770,3 +902,8 @@ h2 {
     }
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('#exampleModalLong').modal('show');
+  });
+</script>
