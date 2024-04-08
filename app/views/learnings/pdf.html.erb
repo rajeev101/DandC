@@ -154,6 +154,11 @@ body {
     </div>
 </nav>
 <div class="form" style="max-width: 400px; margin: 50px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <div id="successMessage" style="display: none; margin-top: 20px;">
+      <div class="alert alert-success">
+        Registration successful!
+      </div>
+    </div>
     <%= form_for @registration, url: registration_index_url(@registration) do |f| %>
     <h2>Registration Form</h2>
     <form id="registrationForm" action="#" method="post">
@@ -186,11 +191,7 @@ body {
         </div>
     </form>
     <% end %>
-    <div id="successMessage" style="display: none; margin-top: 20px;">
-      <div class="alert alert-success">
-        Registration successful!
-      </div>
-    </div>
+
 
 </div>
 <%= render 'footer' %>
