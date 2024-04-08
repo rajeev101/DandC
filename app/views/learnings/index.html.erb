@@ -536,9 +536,9 @@ h1.content-h1 {
 
 @media (max-width: 767px) {
 	.background-container {
-			min-height: 400px; /* Smaller height for smaller devices */
-			background-attachment: scroll; /* Adjusts background behavior for better mobile performance */
-			background-size: cover; /* Continues to cover the available space */
+			min-height: 400px;
+			background-attachment: scroll;
+			background-size: cover;
 				width: 100%;
 				height: auto;
 	}
@@ -902,8 +902,18 @@ h1.content-h1 {
     }
 </style>
 
-<script>
+<%# <script>
   document.addEventListener('DOMContentLoaded', function () {
     $('#exampleModalLong').modal('show');
+  });
+</script> %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var registrationCompleted = <%= session[:registration_completed].present? %>;
+    console.log('Registration completed:', registrationCompleted); // Debugging output
+    if (!registrationCompleted) {
+      $('#exampleModalLong').modal('show');
+    }
   });
 </script>
