@@ -10,14 +10,11 @@
         margin: 0;
         padding: 0;
         background-color: #f2f2f2;
-    }
-    .container {
-        max-width: 400px;
-        margin: 50px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://img.freepik.com/free-photo/watercolor-light-steel-blue-wallpaper-image_53876-94665.jpg');
     }
     h2 {
         text-align: center;
@@ -34,69 +31,183 @@
         border-radius: 4px;
         box-sizing: border-box;
     }
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-    }
-    button:hover {
-        background-color: #45a049;
-    }
-</style>
-</head>
-<body>
 
-<div class="container">
+
+<style type="text/css">
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #80808017;
+    }
+    .text-center{
+        font-style: initial;
+    }
+    img{
+        background-image: grey;
+    }
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        padding-right: 0.5rem;
+        padding-left: 3.5rem;
+        font-weight: bold;
+    }
+    button {
+        background-color: blue;
+        color: white; 
+        padding: 10px 20px; 
+        border: none;
+        cursor: pointer;
+        border: 2px solid white;
+    }
+    h1{
+        text-transform: capitalize;
+        margin-left: 78px;
+        color: rgb(80 61 195);
+    }
+    .background-container {
+        height: 241px;
+        overflow: auto; 
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(80 61 195);
+
+     background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fsimple-background&psig=AOvVaw07Fnm2h3CQEDvHE6S5L7fO&ust=1712492267361000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMin5f_IrYUDFQAAAAAdAAAAABAE');
+    }
+    @media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: hsl(0deg 2.65% 6.9% / 78%);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+} 
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-black" id="myHeader" style="z-index: 300; background-color: hsl(0deg 2.65% 6.9% / 78%)">
+    <a href="/learnings">
+        <svg width="50" height="50" viewBox="0 0 183 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M99.4946 0H27.4946H7.49463V20V53.2541C11.6309 44.3145 18.7127 37.0164 27.4946 32.6049V20H99.4946V20.0019C134.335 20.2706 162.495 48.5967 162.495 83.5C162.495 111.767 144.025 135.721 118.495 143.95V164.711C155.205 155.928 182.495 122.901 182.495 83.5C182.495 37.551 145.381 0.27047 99.4946 0.00146484V0ZM24.5585 138.362C17.6575 129.535 18.7509 117.002 26.771 109.485L14.4264 93.6955C-2.28188 108.047 -4.90408 133.149 8.80262 150.68C22.5093 168.212 47.5022 171.722 65.4615 158.97L53.1164 143.181C43.8862 149.151 31.4596 147.188 24.5585 138.362ZM69.4366 153.948L20.9536 91.9376L36.7081 79.6199L66.4456 117.655C68.5469 113.8 71.4535 110.301 75.1327 107.425C82.2837 101.834 91.0107 99.6424 99.3667 100.613L96.9367 120.465C93.6607 120.117 90.2517 120.991 87.4517 123.181C81.7327 127.651 80.7217 135.911 85.1927 141.63C88.2177 145.499 92.9787 147.213 97.5127 146.532L97.4997 166.623C87.0077 167.233 76.3997 162.854 69.4366 153.948ZM73.1725 51.1098C84.4465 65.5298 81.8965 86.3591 67.4765 97.6334L55.1578 81.8775C60.8761 77.4066 61.8874 69.1468 57.4166 63.4285C52.9457 57.7102 44.6859 56.699 38.9676 61.1698C33.2493 65.6406 32.238 73.9005 36.7089 79.6188L20.953 91.9375C9.67871 77.5175 12.2288 56.6881 26.6488 45.4139C41.0689 34.1396 61.8982 36.6897 73.1725 51.1098Z" fill="white"/>
+        </svg>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container" style="display: flex;">
+            <ul class="navbar-nav ml-auto">
+                <%# if current_user %>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/learnings" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jobs" style="color: white;">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/procast" style="color: white;">Blogs</a>
+                    </li>
+                <%# else %>
+                    <!-- <li class="nav-item">
+                        <%= link_to 'Login | Signup', login_path, class: "nav-link" %>
+                    </li> -->
+                <%# end %>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="form" style="max-width: 400px; margin: 50px auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+    <%= form_for @registration, url: registration_index_url(@registration) do |f| %>
     <h2>Registration Form</h2>
     <form id="registrationForm" action="#" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+        <div class="regis_form">
+            <%= f.label :your_name, "Your_name<span class='text-danger'>*</span>".html_safe %>
+            <%= f.text_field :your_name, class: "form-control", placeholder: "Enter your first name" %>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <div class="regis_form">
+            <%= f.label :email, "Email<span class='text-danger'>*</span>".html_safe %>
+            <%= f.text_field :email, class: "form-control", placeholder: "Type your email here" %>
+        </div>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="confirm_password">Confirm Password</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
-
-        <button type="button" onclick="downloadPDF()">Download PDF</button>
+        <div class="regis_form">
+            <%= f.label :phone_number, "Phone_number<span class='text-danger'>*</span>".html_safe %>
+            <%= f.text_field :phone_number, class: "form-control", placeholder: "Type your phone_number here" %>
+        </div>
+        <div class="regis_form">
+            <%= f.label :company_name %>
+              <%= f.text_field :company_name, class: "form-control", placeholder: "Type your company_name here" %>
+        </div>
+        <div class="regis_form">
+            <%= f.label :college_name %>
+              <%= f.text_field :college_name, class: "form-control", placeholder: "Type your college_name here" %>
+        </div>
+        <br>
+        <div class="regis_form">
+            <%= f.button "Submit", class: "btn btn-primary", style: "margin-bottom: 12px; width: 49%; margin-left: 101px;" %>
+        </div>
+        <div id="success-message" class="alert alert-success" style="display: none;">
+        Registration successful!
+        </div>
     </form>
-    <p id="message"></p>
+    <% end %>
+
 </div>
-
-<script>
-function downloadPDF() {
-    var registrationForm = document.getElementById('registrationForm');
-    var messageElement = document.getElementById('message');
-
-    // Check if browser supports PDF creation
-    if (typeof window.navigator.msSaveBlob !== 'undefined') {
-        // For IE and Edge browsers
-        window.navigator.msSaveBlob(new Blob([registrationForm.outerHTML], { type: 'application/pdf' }), 'registration_form.pdf');
-        messageElement.innerHTML = "PDF downloaded successfully!";
-    } else {
-        // For other browsers
-        html2pdf()
-            .from(registrationForm)
-            .save()
-            .then(function() {
-                messageElement.innerHTML = "PDF downloaded successfully!";
-            })
-            .catch(function(error) {
-                messageElement.innerHTML = "PDF download failed. " + error;
-            });
-    }
-}
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
+<%= render 'footer' %>
 </body>
 </html>
+
+<script>
+  // Function to show the success message
+  function showSuccessMessage() {
+    document.getElementById('success-message').style.display = 'block';
+    // Hide the success message after 2 seconds
+    setTimeout(function() {
+      document.getElementById('success-message').style.display = 'none';
+    }, 2000);
+  }
+
+  // Check if the URL contains "pdf" to ensure that we're on the PDF page
+  if (window.location.href.includes("pdf")) {
+    // If the URL contains "pdf", attach the submit event listener to the form
+    document.querySelector('form').addEventListener('submit', function(event) {
+      // Show the success message when the form is submitted
+      showSuccessMessage();
+    });
+  }
+</script>

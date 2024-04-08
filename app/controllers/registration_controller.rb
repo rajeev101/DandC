@@ -16,10 +16,10 @@ class RegistrationController < ApplicationController
     if registration.save
       SendMailer.send_email(registration.email, registration).deliver_now
 
-      respond_to do |format|
-        format.html { redirect_to root_path, notice: 'Registration successful. Confirmation email sent.' }
-        format.js 
-      end
+      # respond_to do |format|
+      #   format.html { redirect_to pdf_path, notice: 'Registration successful. Confirmation email sent.' }
+      #   format.js 
+      # end
     else
       render :index
     end
@@ -35,7 +35,7 @@ class RegistrationController < ApplicationController
   end
 
     def registration_params
-      params.require(:registration).permit(:your_name, :email, :phone_number, :course_of_interest, :message)
+      params.require(:registration).permit(:your_name, :email, :phone_number, :company_name, :college_name)
     end
 end
 

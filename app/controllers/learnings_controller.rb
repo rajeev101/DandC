@@ -30,6 +30,11 @@ class LearningsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def pdf
+    # @registrations = Registration.all
+    @registration = Registration.new
+  end
+
 
 
   def create
@@ -56,6 +61,6 @@ class LearningsController < ApplicationController
   end
 
     def registration_params
-      params.require(:registration).permit(:your_name, :email, :phone_number, :course_of_interest, :message)
+      params.require(:registration).permit(:your_name, :email, :phone_number, :course_of_interest, :message, :company_name, :college_name)
     end
 end
