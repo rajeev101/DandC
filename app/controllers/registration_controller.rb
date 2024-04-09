@@ -8,8 +8,6 @@ class RegistrationController < ApplicationController
     @registration = Registration.new
 	end
 
-
-
   def create
     registration = Registration.new(registration_params)
     if registration.save
@@ -33,7 +31,7 @@ class RegistrationController < ApplicationController
      @registration = Registration.find(params[:id])
   end
 
-    def registration_params
-      params.require(:registration).permit(:your_name, :email, :phone_number, :company_name, :college_name)
-    end
+  def registration_params
+    params.require(:registration).permit(:your_name, :email, :phone_number, :company_name, :college_name)
+  end
 end

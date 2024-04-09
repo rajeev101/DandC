@@ -471,6 +471,7 @@ h2 {
 	outline: 0;
 	width: 682px;
 	height: 570px;
+    margin-left: -80px;
 }
 
 .modal-header .close {
@@ -533,7 +534,6 @@ h1.content-h1 {
 	border: none;
 	float: right;
 }
-
 @media (max-width: 767px) {
 	.background-container {
 			min-height: 400px;
@@ -592,67 +592,75 @@ h1.content-h1 {
     margin-right: 25px;
    }
 }
+    @keyframes scaleAnimation {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .member {
+        transform-origin: center;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .member:hover {
+        transform: scale(1.1);
+    }
+
+    .author-type-1 {
+ background-color: #ff0000; /* Red */
+}
+
+.author-type-2 {
+ background-color: #00ff00; /* Green */
+}
+
+.author-type-3 {
+ background-color: #0000ff; /* Blue */
+}
+
+.author-type-4 {
+ background-color: #ffff00; /* Yellow */
+}
+
 </style>
 <body>
 <%= render "navbar" %>
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+ <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 15px; padding: 4px 0 0px 213px; color: blue;">Free DEMO's for Offline & Online training</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 15px; padding: 4px 0 0px 213px; color: blue; font-weight: bold;">Free DEMO's for Offline & Online training</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-				<div class="row">
-					<div class="col-md-6 ms-auto left-up">
-						<h1 class="content-h1">Ruby On Rails</h1>
-						<span style="color: white; margin-left: 21px;">from 1 - April @ 11:00 AM (IST)</span>
-						<p style="color: white; font-size: 15px; margin-left:22px">
-							by<br>
-							Mr. Hari Krishna
-						</p>
-						<br>
-						<button class="register-btn" onclick="window.location.href='/pdf'">Register Now!
-					</div>
-					<div class="col-md-6 ms-auto right-up">
-						<h1 class="content-h1">Python Full Stack</h1>
-						<span style="color: white; margin-left: 21px;">from 29 - MAR @ 08:10 AM (IST)</span>
-						<p style="color: white; font-size: 15px;margin-left:22px ">
-							by<br>
-							Mr. Satish Gupta
-						</p>
-						<br>
-						<button class="register-btn" onclick="window.location.href='/pdf'">Register Now!
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 ms-auto left-down">
-						<h1 class="content-h1">DATA SCIENCE</h1>
-						<span style="color: white; margin-left: 21px;">from 1 - April @ 08:03 AM (IST)</span>
-						<p style="color: white; font-size: 15px; margin-left:22px">
-							by<br />
-							Mr. Daniel
-						</p>
-						<br>
-						<button class="register-btn" onclick="window.location.href='/pdf'">Register Now!
-					</div>
-					<div class="col-md-6 ms-auto right-down">
-						<h1 class="content-h1">AWS</h1>
-						<span style="color: white; margin-left: 21px;">from 1 - April @ 07:30 AM (IST)</span>
-						<p style="color: white; font-size: 15px; margin-left:22px">
-							by<br>
-							Mr. Hari Krishna
-						</p>
-						<br>
-						<button class="register-btn" onclick="window.location.href='/pdf'">Register Now!
-					</div>
-				</div>
+        <div class="row">
+          <% @banners.first(4).each_with_index do |banner, index| %>
+            <div class="col-md-6 ms-auto left-up" style="background-color: <%= ['#2d6de3', '#241672', '#2da33b', '#e9283a'][index] %>;">
+              <h1 class="content-h1"><%= banner.title %></h1>
+              <span style="color: white; margin-left: 21px;"><%= banner.duration %></span>
+              <p style="color: white; font-size: 15px; margin-left:22px">
+                by<br>
+                <%= banner.author_name %>
+              </p>
+              <br>
+              <button class="register-btn" onclick="window.location.href='/pdf'">Register Now!</button>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
+ </div>
 </div>
+
 
 <div class="background-container">
     <div class="carousel-caption" style="text-align: left;">
@@ -851,61 +859,13 @@ h1.content-h1 {
     </div>
 
 </body>
-<style>
-    @keyframes scaleAnimation {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
 
-    .member {
-        transform-origin: center;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .member:hover {
-        transform: scale(1.1);
-    }
-</style>
-<style>
-    @keyframes scaleAnimation {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    .plan-header {
-        overflow: hidden;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .plan-header:hover {
-        transform: scale(1.1);
-    }
-
-    .plan-header img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-</style>
 <!-- <script>
   document.addEventListener('DOMContentLoaded', function () {
     $('#exampleModalLong').modal('show');
   });
 </script> %> -->
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -916,5 +876,7 @@ h1.content-h1 {
     }
   });
 </script>
+
+
 
 

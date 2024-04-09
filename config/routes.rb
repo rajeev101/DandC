@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :subcategories
   # resources :syllabus
   # resources :syllabuses
+  resources :banners
   resources :registration, only: [:new, :create, :index]
   resources :contacts
   resources :recommendations

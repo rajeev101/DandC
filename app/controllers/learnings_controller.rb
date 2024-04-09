@@ -8,6 +8,7 @@ class LearningsController < ApplicationController
     @contacts = Contact.all
     @registrations = Registration.all
     @registration = Registration.new
+    @banners = Banner.all
   end
 
   def more
@@ -24,7 +25,6 @@ class LearningsController < ApplicationController
     @topics = @super_sub_category.topics
     render 'learnings/topics'
   end
-
 
   def procast
     @blogs = Blog.all
