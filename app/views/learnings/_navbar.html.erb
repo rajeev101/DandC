@@ -34,7 +34,7 @@
     .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
-}
+} 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-black" id="myHeader" style="z-index: 300; background-color: hsl(0deg 2.65% 6.9% / 78%)">
     <a href="/learnings">
@@ -63,9 +63,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Request Callback" style="color: white;">Request Callback</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jobs" style="color: white;">Jobs</a>
-                    </li>
+<!--                     <li class="nav-item">
+                        <a class="nav-link" href="/jobs" style="color: white;"></a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="/procast" style="color: white;">Blogs</a>
                     </li>
@@ -92,7 +92,7 @@
     }
   }
 
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
     navLink.addEventListener('click', function() {
       smoothScrollToTop();
       setTimeout(function() {
@@ -108,5 +108,4 @@
       window.scrollTo(0, currentScroll - (currentScroll / 10));
     }
   }
-
 </script>
