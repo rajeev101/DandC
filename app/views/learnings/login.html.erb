@@ -184,73 +184,72 @@ form .btn input[type="submit"]{
   font-weight: 500;
   cursor: pointer;
 }
-
- </style>
-   <div class="wrapper">
-      <div class="title-text">
-        <div class="title login">Login</div>
-        <div class="title signup">Signup</div>
-      </div>
-      <div class="form-container">
-        <div class="slide-controls">
-          <input type="radio" name="slide" id="login" checked>
-          <input type="radio" name="slide" id="signup">
-          <label for="login" class="slide login">Login</label>
-          <label for="signup" class="slide signup">Signup</label>
-          <div class="slider-tab"></div>
-        </div>
-        <div class="form-inner">
-          <form action="<%= login_path %>" class="login" method="post">
-            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
-            <div class="field">
-              <%= label_tag :email, "Email Address" %>
-              <%= email_field_tag :email, nil, class: "form-control", required: true %>
-            </div>
-
-            <div class="field">
-              <%= label_tag :password, "Password" %>
-              <%= password_field_tag :password, nil, class: "form-control", required: true %>
-            </div>
-
-            <div class="pass-link">
-              <%= link_to "Forgot password?", forgot_password_path %>
-            </div>
-
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <%= submit_tag "Login", class: "btn-submit" %>
-            </div>
-
-            <div class="signup-link">
-              Not a member? <%= link_to "Signup now", accounts_path %>
-            </div>
-          </form>
-
-          <%= form_with(model: @account, url: accounts_path, local: true) do |form| %>
-            <div class="field">
-              <%= form.label :email %>
-              <%= form.email_field :email, class: "form-control", placeholder: "Email Address", required: true %>
-            </div>
-
-            <div class="field">
-              <%= form.label :password %>
-              <%= form.password_field :password, class: "form-control", placeholder: "Password", required: true %>
-            </div>
-
-            <div class="field">
-              <%= form.label :password_confirmation %>
-              <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", required: true %>
-            </div>
-
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <%= form.submit 'Signup', class: "btn-submit" %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+</style>
+<div class="wrapper">
+  <div class="title-text">
+    <div class="title login">Login</div>
+    <div class="title signup">Signup</div>
+  </div>
+  <div class="form-container">
+    <div class="slide-controls">
+      <input type="radio" name="slide" id="login" checked>
+      <input type="radio" name="slide" id="signup">
+      <label for="login" class="slide login">Login</label>
+      <label for="signup" class="slide signup">Signup</label>
+      <div class="slider-tab"></div>
     </div>
+    <div class="form-inner">
+      <form action="<%= login_path %>" class="login" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+        <div class="field">
+          <%= label_tag :email, "Email Address" %>
+          <%= email_field_tag :email, nil, class: "form-control", required: true %>
+        </div>
+
+        <div class="field">
+          <%= label_tag :password, "Password" %>
+          <%= password_field_tag :password, nil, class: "form-control", required: true %>
+        </div>
+
+        <div class="pass-link">
+          <%= link_to "Forgot password?", forgot_password_path %>
+        </div>
+
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <%= submit_tag "Login", class: "btn-submit" %>
+        </div>
+
+        <div class="signup-link">
+          Not a member? <%= link_to "Signup now", accounts_path %>
+        </div>
+      </form>
+
+      <%= form_with(model: @account, url: accounts_path, local: true) do |form| %>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.email_field :email, class: "form-control", placeholder: "Email Address", required: true %>
+        </div>
+
+        <div class="field">
+          <%= form.label :password %>
+          <%= form.password_field :password, class: "form-control", placeholder: "Password", required: true %>
+        </div>
+
+        <div class="field">
+          <%= form.label :password_confirmation %>
+          <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Confirm password", required: true %>
+        </div>
+
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <%= form.submit 'Signup', class: "btn-submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 <script type="text/javascript">
    const loginText = document.querySelector(".title-text .login");
       const loginForm = document.querySelector("form.login");
@@ -269,5 +268,4 @@ form .btn input[type="submit"]{
         signupBtn.click();
         return false;
       });
-
 </script>

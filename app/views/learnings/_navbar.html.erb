@@ -63,9 +63,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Request Callback" style="color: white;">Request Callback</a>
                     </li>
-<!--                     <li class="nav-item">
-                        <a class="nav-link" href="/jobs" style="color: white;"></a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="/procast" style="color: white;">Blogs</a>
                     </li>
@@ -91,8 +88,7 @@
       header.classList.remove("sticky");
     }
   }
-
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
     navLink.addEventListener('click', function() {
       smoothScrollToTop();
       setTimeout(function() {
@@ -108,4 +104,5 @@
       window.scrollTo(0, currentScroll - (currentScroll / 10));
     }
   }
+
 </script>

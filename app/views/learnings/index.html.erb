@@ -11,15 +11,12 @@
         margin: 0;
         padding: 0;
         background-color: #fafafa;
-/*        width: 100%;*/
-
     }
     @media screen and (max-width: 767px){
         body{
             width: 100%;
         }
     }
-
     .text-center{
         font-style: initial;
     }
@@ -30,7 +27,6 @@
         display: flex;
         flex-direction: row-reverse;
         padding: 10px;
-/*        margin-top: -45px;*/
     }
     .navbar-light .navbar-nav .nav-link {
         color: white;
@@ -44,8 +40,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
-/*    margin-bottom: -37px;*/
-}
+    }
     button {
         background-color: blue;
         color: white;
@@ -77,8 +72,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #2f2fd3;
-
-    background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
+        background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
     }
     .content {
         color: white;
@@ -103,7 +97,6 @@
 
     }
     .plan-header {
-
         color: white;
         padding: 8px;
         text-align: center;
@@ -174,88 +167,80 @@
     }
     p{
         font-size: 30px;
-/*        font-weight: bold;*/
+    }
+    h1{
+        margin: 50px 0 30px;
+        text-align: center;
+    }
+    .faq-container{
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .faq{
+        background-color: #44414112;
+        border: 1px solid #f0efef;
+        border-radius: 10px;
+        padding: 17px;
+        margin: 16px -183px;
+        position: relative;
+        overflow: hidden;
+        transition: all .4s e;
+        cursor: pointer;
+    }
+    .faq.active{
+      background-color: #fff8c91c;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+    .faq-title{
+        margin: 15px 35px 0 0;
+    }
+    .faq-text{
+      display: none;
+      margin: 30px 0 0;
+      font-size: 15px;
     }
 
+    .faq.active .faq-text{
+      display: block;
+    }
 
-h1{
-  margin: 50px 0 30px;
-  text-align: center;
-}
+    .faq-toggle {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      height: 30px;
+      width: 30px;
+    }
 
-.faq-container{
-  max-width: 600px;
-  margin: 0 auto;
-}
+    .chevron, .close{
+      width: 12px;
+      height:12px;
+    }
 
-.faq{
-    background-color: #44414112;
-    border: 1px solid #f0efef;
-    border-radius: 10px;
-    padding: 17px;
-    margin: 16px -183px;
-    position: relative;
-    overflow: hidden;
-    transition: all .4s e;
-    cursor: pointer;
-}
+    .faq-toggle .close{
+      display: none;
+    }
 
-.faq.active{
-  background-color: #fff8c91c;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-}
+    .faq.active .faq-toggle .close{
+      display: block;
+    }
 
-.faq-title{
-      margin: 15px 35px 0 0;
-}
+    .faq.active .faq-toggle .chevron{
+      display: none;
+    }
 
-.faq-text{
-  display: none;
-  margin: 30px 0 0;
-  font-size: 15px;
-}
-
-.faq.active .faq-text{
-  display: block;
-}
-
-.faq-toggle {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  height: 30px;
-  width: 30px;
-}
-
-.chevron, .close{
-  width: 12px;
-  height:12px;
-}
-
-.faq-toggle .close{
-  display: none;
-}
-
-.faq.active .faq-toggle .close{
-  display: block;
-}
-
-.faq.active .faq-toggle .chevron{
-  display: none;
-}
-
-.faq.active .faq-toggle{
-  background-color: #A555EC;
-  border-radius: 50%;
-  color:#ffffd9;
-}
+    .faq.active .faq-toggle{
+      background-color: #A555EC;
+      border-radius: 50%;
+      color:#ffffd9;
+    }
     @media (max-width: 635px) {
       .faq {
         background-color: #44414112;
@@ -268,282 +253,249 @@ h1{
         transition: all .4s e;
     }
     }
-h3{
-    font-size: 15px;
-}
-.subscription-plan.mern-stack {
-    margin-left: -159px;
-}
-h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.course-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 75px;
-    margin-left: 72px;
-    margin-right: 70px;
+    h3{
+        font-size: 15px;
+    }
+    .subscription-plan.mern-stack {
+        margin-left: -159px;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .course-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 75px;
+        margin-left: 72px;
+        margin-right: 70px;
 
-}
-.circular-image {
-  border-radius: 50%;
-}
+    }
+    .circular-image {
+      border-radius: 50%;
+    }
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+    .count-particles {
+        position: absolute;
+        top: 48px;
+        left: 810px;
+        width: 400px;
+        color: #0b0c0c;
+        font-size: 0.8em;
+        text-align: left;
+        text-indent: 5px;
+        line-height: 32px;
+        padding-bottom: -28px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        margin-top: -48px;
+    }
+    .form-control {
+        display: block;
+        width: 91%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 0.5;
+        color: #495057;
+        background-color: #fff;
+        margin-left: 17px;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        margin-left: 12px;
+    }
+    input#registration_your_name {
+        width: 185%;
+        margin-left: 24px;
+    }
+    input#registration_email {
+        width: 185%;
+        margin-left: 24px;
+    }
+    input#registration_phone_number {
+        width: 185%;
+        margin-left: 24px;
+    }
+    input#registration_course_of_interest{
+        width: 185%;
+        margin-left: 24px;
+    }
+    textarea#registration_message {
+        width: 185%;
+        margin-left: 24px;
 
+    }
+    .message {
+        margin-top: 10px;
+    }
 
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-.count-particles {
-    position: absolute;
-    top: 48px;
-    left: 810px;
-    width: 400px;
-    color: #0b0c0c;
-    font-size: 0.8em;
-    text-align: left;
-    text-indent: 5px;
-    line-height: 32px;
-    padding-bottom: -28px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    margin-top: -48px;
-}
-.form-control {
-    display: block;
-    width: 91%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 0.5;
-    color: #495057;
-    background-color: #fff;
-    margin-left: 17px;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    margin-left: 12px;
-}
+    .success {
+        display: none;
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
 
-input#registration_your_name {
-    width: 185%;
-    margin-left: 24px;
-}
-input#registration_email {
-    width: 185%;
-    margin-left: 24px;
-}
-input#registration_phone_number {
-    width: 185%;
-    margin-left: 24px;
-}
-input#registration_course_of_interest{
-    width: 185%;
-    margin-left: 24px;
-}
-textarea#registration_message {
-    width: 185%;
-    margin-left: 24px;
-
-}
- .message {
-    margin-top: 10px;
-  }
-
-  .success {
-    display: none;
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-  }
-
-  .danger {
-    display: none;
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-  }
-  nav.navbar.navbar-expand-lg.navbar-light.bg-black {
-    background-color: black;
-  }
-  a.nav-link {
-    color: white;
-  }
-  .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-    color: white;
-}
-
-h3.faq-title {
-    font-size: 17px;
-/*    font-weight: revert;*/
-}
-
-
-
-/*  .image-slider {
-    display: flex;
-    transition: transform 30s ease;
-  }
-
-  .img-thumbnail {
-      width: 186px;
-      height: 166px;
-      margin-right: 10px;
-      object-fit: cover;
-  }
-  .btn-primary {
-    background-color: red;
-  }
-
-  .carousel-indicators {
-    bottom: 0px;
-  }*/
-
+    .danger {
+        display: none;
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light.bg-black {
+        background-color: black;
+    }
+    a.nav-link {
+        color: white;
+    }
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        color: white;
+    }
+    h3.faq-title {
+        font-size: 17px;
+    }
     .carousel-caption {
         position: absolute;
-/*        left: 0;*/
         right: auto;
-/*        bottom: 0;*/
         z-index: 10;
         padding: 20px;
         bottom: 143px;
         left: 2%;
     }
+    h2 {
+        font-size: 42px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-size: 58px;
+        line-height: 68px;
+        letter-spacing: 0.5px;
+        word-spacing: 6px;
+    }
 
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
 
+    .sticky + .content {
+      padding-top: 102px;
+    }
+    .background-container {
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2f2fd3;
+        background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .modal-content {
+    	position: relative;
+    	display: -ms-flexbox;
+    	display: flex;
+    	-ms-flex-direction: column;
+    	flex-direction: column;
+    	width: 100%;
+    	pointer-events: auto;
+    	background-color: #fff;
+    	background-clip: padding-box;
+    	border: 1px solid rgba(0,0,0,.2);
+    	border-radius: 0.3rem;
+    	outline: 0;
+    	width: 682px;
+    	height: 570px;
+        margin-left: -80px;
+    }
 
-h2 {
-    font-size: 42px;
-    font-weight: bold;
-    color: #FFFFFF;
-    font-size: 58px;
-    line-height: 68px;
-    letter-spacing: 0.5px;
-    word-spacing: 6px;
-}
+    .modal-header .close {
+    	padding: 0rem 0rem;
+    	margin: 0rem 0rem 0rem auto;
+    	color: white;
+    	background-color: orangered;
+    	width: 30px;
+    	height: 30px;
+    	border-radius: 30px;
+    }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        margin-top: -15px;
+        width: 100%;
+    }
 
-.sticky + .content {
-  padding-top: 102px;
-}
-.background-container {
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2f2fd3;
-    background-image: url('https://res.cloudinary.com/website-media/image/upload/v1707565710/Screenshot_2024_02_02_171331_transformed_transformed_1_cd68a3e441.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    h1.content-h1 {
+        font-size: 35px;
+        color: yellow;
+        margin-top: 15px;
+    }
 
-.modal-content {
-	position: relative;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	width: 100%;
-	pointer-events: auto;
-	background-color: #fff;
-	background-clip: padding-box;
-	border: 1px solid rgba(0,0,0,.2);
-	border-radius: 0.3rem;
-	outline: 0;
-	width: 682px;
-	height: 570px;
-    margin-left: -80px;
-}
+    .col-md-6.ms-auto.left-up {
+    	display: block;
+    	background-color: blue;
+    	height: 225px;
+    }
 
-.modal-header .close {
-	padding: 0rem 0rem;
-	margin: 0rem 0rem 0rem auto;
-	color: white;
-	background-color: orangered;
-	width: 30px;
-	height: 30px;
-	border-radius: 30px;
-}
+    .col-md-6.ms-auto.right-up {
+    	display: block;
+    	background-color: #451472;
+    	height: 225px;
+    }
 
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-left: 0px;
-    margin-top: -15px;
-    width: 100%;
-}
+    .col-md-6.ms-auto.left-down {
+    	display: block;
+    	background-color: #35af35;
+    	height: 225px;
+    	margin-top: 45px;
+    }
 
-h1.content-h1 {
-    font-size: 35px;
-    color: yellow;
-    margin-top: 15px;
-}
+    .col-md-6.ms-auto.right-down {
+    	display: block;
+    	background-color: #d75c13;
+    	height: 225px;
+    	margin-top: 45px;
+    }
 
-.col-md-6.ms-auto.left-up {
-	display: block;
-	background-color: blue;
-	height: 225px;
-}
-
-.col-md-6.ms-auto.right-up {
-	display: block;
-	background-color: #451472;
-	height: 225px;
-}
-
-.col-md-6.ms-auto.left-down {
-	display: block;
-	background-color: #35af35;
-	height: 225px;
-	margin-top: 45px;
-}
-
-.col-md-6.ms-auto.right-down {
-	display: block;
-	background-color: #d75c13;
-	height: 225px;
-	margin-top: 45px;
-}
-
-.register-btn {
-	cursor: pointer;
-	border-radius: 80px;
-	color: yellow;
-	background: darkslategray;
-	border: none;
-	float: right;
-}
-@media (max-width: 767px) {
-	.background-container {
+    .register-btn {
+    	cursor: pointer;
+    	border-radius: 80px;
+    	color: yellow;
+    	background: darkslategray;
+    	border: none;
+    	float: right;
+    }
+    @media (max-width: 767px) {
+    	.background-container {
 			min-height: 400px;
 			background-attachment: scroll;
 			background-size: cover;
-				width: 100%;
-				height: auto;
-	}
-	.carousel-caption {
+			width: 100%;
+			height: auto;
+    	}
+    	.carousel-caption {
 			position: absolute;
 			left: 0;
 			right: auto;
@@ -554,45 +506,41 @@ h1.content-h1 {
 			left: 0%;
 			font-size: 16px;
 			margin-bottom: 71px;
-	}
-	h2{
-			font-size: 34px;
-	line-height: 45px;
-
-	}
-}
-@media (max-width: 335px){
-        .program {
-        font-size: 42px;
-        font-weight: bold;
-        color: #FFFFFF;
-        font-size: 29px;
-        line-height: 35px;
-        letter-spacing: 0.5px;
-        word-spacing: 6px;
+    	}
+    	h2{
+            font-size: 34px;
+            line-height: 45px;
+    	}
     }
+    @media (max-width: 335px){
+            .program {
+            font-size: 42px;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 29px;
+            line-height: 35px;
+            letter-spacing: 0.5px;
+            word-spacing: 6px;
+        }
 
-}
-
-@media (max-width:  767px){
-    .course-container {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    padding: 0px;
-    margin-left: 267px;
     }
-    .subscription-plan {
-    max-width: 310px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 16px;
-    border-radius: 8px;
-    margin: 0px -19px;
-   }
-   .container{
-    margin-right: 25px;
-   }
-}
+    @media (max-width:  767px){
+        .course-container {
+        padding: 0px;
+        margin-left: 267px;
+        }
+        .subscription-plan {
+        max-width: 310px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 16px;
+        border-radius: 8px;
+        margin: 0px -19px;
+       }
+       .container{
+        margin-right: 25px;
+       }
+    }
     @keyframes scaleAnimation {
         0% {
             transform: scale(1);
@@ -615,21 +563,20 @@ h1.content-h1 {
     }
 
     .author-type-1 {
- background-color: #ff0000; /* Red */
-}
+        background-color: #ff0000; 
+    }
 
-.author-type-2 {
- background-color: #00ff00; /* Green */
-}
+    .author-type-2 {
+        background-color: #00ff00; 
+    }
 
-.author-type-3 {
- background-color: #0000ff; /* Blue */
-}
+    .author-type-3 {
+        background-color: #0000ff; 
+    }
 
-.author-type-4 {
- background-color: #ffff00; /* Yellow */
-}
-
+    .author-type-4 {
+        background-color: #ffff00;
+    }
 </style>
 <body>
 <%= render "navbar" %>
@@ -750,129 +697,114 @@ h1.content-h1 {
 </div>
 
 
-        <h1>Advantages Of Joining Us</h1>
-        <div class="row justify-content-center gap-4">
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 67, 129);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;">
-                        <path d="M16 4C16.5523 4 17 4.44772 17 5V9.2L22.2133 5.55071C22.4395 5.39235 22.7513 5.44737 22.9096 5.6736C22.9684 5.75764 23 5.85774 23 5.96033V18.0397C23 18.3158 22.7761 18.5397 22.5 18.5397C22.3974 18.5397 22.2973 18.5081 22.2133 18.4493L17 14.8V19C17 19.5523 16.5523 20 16 20H2C1.44772 20 1 19.5523 1 19V5C1 4.44772 1.44772 4 2 4H16ZM7.4 8.82867C7.2067 8.82867 7.04543 8.96578 7.00813 9.14806L7 9.22867V14.7713C7 14.8474 7.02169 14.9219 7.06254 14.9861C7.16631 15.1492 7.36858 15.2116 7.54238 15.1452L7.61475 15.1088L11.9697 12.3375C12.0191 12.306 12.061 12.2641 12.0924 12.2148C12.1962 12.0517 12.1671 11.842 12.0333 11.7127L11.9697 11.6625L7.61475 8.8912C7.55057 8.85036 7.47607 8.82867 7.4 8.82867Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live classes by Instructors</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(231, 102, 131);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">1:1 mentorship</h4><p></p>
-                     </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(80, 143, 167);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10.27 12h3.46a1.5 1.5 0 001.48-1.75l-.3-1.79a2.951 2.951 0 00-5.82.01l-.3 1.79c-.15.91.55 1.74 1.48 1.74zM1.66 11.11c-.13.26-.18.57-.1.88.16.69.76 1.03 1.53 1h1.95c.83 0 1.51-.58 1.51-1.29 0-.14-.03-.27-.07-.4-.01-.03-.01-.05.01-.08.09-.16.14-.34.14-.53 0-.31-.14-.6-.36-.82-.03-.03-.03-.06-.02-.1.07-.2.07-.43.01-.65a1.12 1.12 0 00-.99-.74.09.09 0 01-.07-.03C5.03 8.14 4.72 8 4.37 8c-.3 0-.57.1-.75.26-.03.03-.06.03-.09.02a1.24 1.24 0 00-1.7 1.03c0 .02-.01.04-.03.06-.29.26-.46.65-.41 1.05.03.22.12.43.25.6.03.02.03.06.02.09zM16.24 13.65c-1.17-.52-2.61-.9-4.24-.9-1.63 0-3.07.39-4.24.9A2.988 2.988 0 006 16.39V18h12v-1.61c0-1.18-.68-2.26-1.76-2.74zM1.22 14.58A2.01 2.01 0 000 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58zM22.78 14.58A6.95 6.95 0 0020 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57c0-.81-.48-1.53-1.22-1.85zM22 11v-.5c0-1.1-.9-2-2-2h-2c-.42 0-.65.48-.39.81l.7.63c-.19.31-.31.67-.31 1.06 0 1.1.9 2 2 2s2-.9 2-2z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Connect with Peer Group</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(222, 174, 49);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M152,96V80h-8a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h8V160a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16v48a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V192h-8a32,32,0,0,1-32-32V136H80v8a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V112A16,16,0,0,1,32,96H64a16,16,0,0,1,16,16v8h32V96a32,32,0,0,1,32-32h8V48a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16V96a16,16,0,0,1-16,16H168A16,16,0,0,1,152,96Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Structured Curriculum</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(167, 104, 215);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Lifetime access to the recordings</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 140, 255);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live doubt support</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(179, 34, 94);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 1h6v2H9zM19.03 7.39l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4a9 9 0 00-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 007.03-14.61zM13 14h-2V8h2v6z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Flexible</h4><p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-5" style="cursor: pointer;">
-                <div class="member d-flex align-items-center gap-2" style="background-color: rgb(35, 145, 23);">
-                    <div class="text-white">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg>&nbsp;&nbsp;&nbsp;
-                        <h4 class="h4" style="font-size: 22px;">Cash prize in every class</h4><p></p>
-                    </div>
-                </div>
+<h1>Advantages Of Joining Us</h1>
+<div class="row justify-content-center gap-4">
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 67, 129);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;">
+                <path d="M16 4C16.5523 4 17 4.44772 17 5V9.2L22.2133 5.55071C22.4395 5.39235 22.7513 5.44737 22.9096 5.6736C22.9684 5.75764 23 5.85774 23 5.96033V18.0397C23 18.3158 22.7761 18.5397 22.5 18.5397C22.3974 18.5397 22.2973 18.5081 22.2133 18.4493L17 14.8V19C17 19.5523 16.5523 20 16 20H2C1.44772 20 1 19.5523 1 19V5C1 4.44772 1.44772 4 2 4H16ZM7.4 8.82867C7.2067 8.82867 7.04543 8.96578 7.00813 9.14806L7 9.22867V14.7713C7 14.8474 7.02169 14.9219 7.06254 14.9861C7.16631 15.1492 7.36858 15.2116 7.54238 15.1452L7.61475 15.1088L11.9697 12.3375C12.0191 12.306 12.061 12.2641 12.0924 12.2148C12.1962 12.0517 12.1671 11.842 12.0333 11.7127L11.9697 11.6625L7.61475 8.8912C7.55057 8.85036 7.47607 8.82867 7.4 8.82867Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live classes by Instructors</h4><p></p>
             </div>
         </div>
-
-        <h1>Companies behind top notch instructor</h1>
-        <br><br>
-        <div class="container" style="display: flex; flex-direction: column;">
-            <img alt="companies" src="https://i.postimg.cc/h4X98SXk/Screenshot-2023-07-08-150931.png">
-        </div>
-
-
-        <h1>Frequently Asked Questions</h1>
-        <% @faqs.each do |faq| %>
-        <div class='faq-container'>
-            <div class="faq">
-                <h3 class="faq-title" style="background-color: #44414100; color: black;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(4, 83, 153)" class="bi bi-question-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
-                    </svg>
-                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="collapsed" aria-expanded="false" onclick="toggleQuestion(<%= faq.id %>)">
-                        <%= faq.question %>
-                    </a>
-
-
-                    <svg data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="e-font-icon-svg e-fas-chevron-down" style="float: right; display: block;" width="12" height="auto" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" onclick="toggleIcon(this, '<%= faq.id %>')">
-                        <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                    </svg>
-
-                    <svg data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="e-font-icon-svg e-fas-chevron-up" style="float: right; transform: rotate(180deg); display: none;" width="12" height="auto" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" onclick="toggleIcon(this, '<%= faq.id %>')">
-                        <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-                    </svg>
-                </h3>
-                <div id="faq-list-<%= faq.id %>" class="collapse" data-bs-parent=".faq-list"><br>
-                    <p class="answer" style="font-size: 18px;"><%= faq.answer %></p>
-                </div>
-            </div>
-        </div>
-        <% end %>
-
-
-
-
-        <div class="instructor" id="Instructors">
-            <%= render "instructors" %>
-        </div>
-
-        <%= render "recommendation" %>
-
-
-        <div class="Inquiry" id="Request Callback">
-            <h1>Submit the form for Inquiry</h1><br><br>
-            <%= render "contact" %>
-        </div>
-
-        <%= render "footer" %>
     </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(231, 102, 131);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">1:1 mentorship</h4><p></p>
+             </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(80, 143, 167);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10.27 12h3.46a1.5 1.5 0 001.48-1.75l-.3-1.79a2.951 2.951 0 00-5.82.01l-.3 1.79c-.15.91.55 1.74 1.48 1.74zM1.66 11.11c-.13.26-.18.57-.1.88.16.69.76 1.03 1.53 1h1.95c.83 0 1.51-.58 1.51-1.29 0-.14-.03-.27-.07-.4-.01-.03-.01-.05.01-.08.09-.16.14-.34.14-.53 0-.31-.14-.6-.36-.82-.03-.03-.03-.06-.02-.1.07-.2.07-.43.01-.65a1.12 1.12 0 00-.99-.74.09.09 0 01-.07-.03C5.03 8.14 4.72 8 4.37 8c-.3 0-.57.1-.75.26-.03.03-.06.03-.09.02a1.24 1.24 0 00-1.7 1.03c0 .02-.01.04-.03.06-.29.26-.46.65-.41 1.05.03.22.12.43.25.6.03.02.03.06.02.09zM16.24 13.65c-1.17-.52-2.61-.9-4.24-.9-1.63 0-3.07.39-4.24.9A2.988 2.988 0 006 16.39V18h12v-1.61c0-1.18-.68-2.26-1.76-2.74zM1.22 14.58A2.01 2.01 0 000 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58zM22.78 14.58A6.95 6.95 0 0020 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57c0-.81-.48-1.53-1.22-1.85zM22 11v-.5c0-1.1-.9-2-2-2h-2c-.42 0-.65.48-.39.81l.7.63c-.19.31-.31.67-.31 1.06 0 1.1.9 2 2 2s2-.9 2-2z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Connect with Peer Group</h4><p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(222, 174, 49);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M152,96V80h-8a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h8V160a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16v48a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V192h-8a32,32,0,0,1-32-32V136H80v8a16,16,0,0,1-16,16H32a16,16,0,0,1-16-16V112A16,16,0,0,1,32,96H64a16,16,0,0,1,16,16v8h32V96a32,32,0,0,1,32-32h8V48a16,16,0,0,1,16-16h48a16,16,0,0,1,16,16V96a16,16,0,0,1-16,16H168A16,16,0,0,1,152,96Z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Structured Curriculum</h4><p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(167, 104, 215);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Lifetime access to the recordings</h4><p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(15, 140, 255);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Live doubt support</h4><p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(179, 34, 94);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 1h6v2H9zM19.03 7.39l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42A8.962 8.962 0 0012 4a9 9 0 00-9 9c0 4.97 4.02 9 9 9a8.994 8.994 0 007.03-14.61zM13 14h-2V8h2v6z"></path></svg>&nbsp;&nbsp;&nbsp;<h4 class="h4" style="font-size: 22px;">Flexible</h4><p></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5" style="cursor: pointer;">
+        <div class="member d-flex align-items-center gap-2" style="background-color: rgb(35, 145, 23);">
+            <div class="text-white">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="height: 50px; width: 50px;"><path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg>&nbsp;&nbsp;&nbsp;
+                <h4 class="h4" style="font-size: 22px;">Cash prize in every class</h4><p></p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<h1>Companies behind top notch instructor</h1>
+<div class="container" style="display: flex; flex-direction: column;">
+    <img alt="companies" src="https://i.postimg.cc/h4X98SXk/Screenshot-2023-07-08-150931.png">
+</div>
+
+<h1>Frequently Asked Questions</h1>
+<% @faqs.each do |faq| %>
+<div class='faq-container'>
+    <div class="faq">
+        <h3 class="faq-title" style="background-color: #44414100; color: black;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="rgb(4, 83, 153)" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+            </svg>
+            <a data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="collapsed" aria-expanded="false" onclick="toggleQuestion(<%= faq.id %>)">
+                <%= faq.question %>
+            </a>
+
+
+            <svg data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="e-font-icon-svg e-fas-chevron-down" style="float: right; display: block;" width="12" height="auto" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" onclick="toggleIcon(this, '<%= faq.id %>')">
+                <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+            </svg>
+
+            <svg data-bs-toggle="collapse" data-bs-target="#faq-list-<%= faq.id %>" class="e-font-icon-svg e-fas-chevron-up" style="float: right; transform: rotate(180deg); display: none;" width="12" height="auto" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" onclick="toggleIcon(this, '<%= faq.id %>')">
+                <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+            </svg>
+        </h3>
+        <div id="faq-list-<%= faq.id %>" class="collapse" data-bs-parent=".faq-list"><br>
+            <p class="answer" style="font-size: 18px;"><%= faq.answer %></p>
+        </div>
+    </div>
+</div>
+<% end %>
+
+<div class="instructor" id="Instructors">
+    <%= render "instructors" %>
+</div>
+
+<%= render "recommendation" %>
+
+<div class="Inquiry" id="Request Callback">
+    <h1>Submit the form for Inquiry</h1><br><br>
+    <%= render "contact" %>
+</div>
+
+<%= render "footer" %>
 </body>
-
-<!-- <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    $('#exampleModalLong').modal('show');
-  });
-</script> %> -->
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
