@@ -20,7 +20,7 @@ class CoursesController < ApplicationController
     end
   end
 
-    private
+  private
 
   def set_course
     @course = Course.find(params[:id])
